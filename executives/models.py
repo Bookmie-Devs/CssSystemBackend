@@ -32,5 +32,9 @@ class Executive(models.Model):
 
 
 class ExecutiveProfile(models.Model):
-    executive = models.ForeignKey(Executive, on_delete=models.CASCADE)
+    executive = models.ForeignKey(
+        Executive,
+        on_delete=models.CASCADE,
+        related_name="profiles",
+    )
     image = models.ImageField(upload_to="profile_images", null=True)
