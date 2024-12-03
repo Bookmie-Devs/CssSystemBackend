@@ -1,64 +1,50 @@
-The Css Adminitration System.
+The CSS Administration System
 
-The System is divided into sections corresponding to the different levels of roles and
-positions available in the Css Department.
-Permissions for each level should be carfully managed by the President or the Admin who is
-in charge of managing the system as a proxy for the president if the presisdent is too busy to do so with the president's permissions
+The system is divided into sections corresponding to the different levels of roles and positions available in the CSS Department. Permissions for each level should be carefully managed by the President or the Admin, who acts as a proxy for the President if the President is too busy to manage the system. This is done with the President's permission.
 
-Sections:
-The Sections inlcude
-Accounts and Persmosions Management
-Acadamcics and Resources
-Events and News
-Timeline and Exective Position History( Achivements)
-Advertisment
-and More
+Sections: The sections include:
 
-Note:
-Each of the sections named above has its perismisions set up that will handeled by the current president and the current members in office. By Permmsions i mean what each adminiotration postion or who ever is in postion is allowed to do on the admin systme
-E.g The Presisdent may deicedi news should only be written byt the secetary and appproved by the PRO before going out or before appearing on the front end side of the Page. He can do this setting up the neccsary permisions without any code which will be explain later in the documenttions
+    Accounts and Permissions Management
+    Academics and Resources
+    Events and News
+    Timeline and Executive Position History (Achievements)
+    Advertisements
+    And more
 
-PLEASE CALL FOR ANY FURTHER SINCE SOME FEATURES GO MUCH INTO DETAIL PRATICALLY
+Note: Each of the sections named above has its permissions set up, which will be handled by the current President and the current members in office. By "permissions," I mean what each administration position, or whoever is in the position, is allowed to do on the admin system. For example, the President may decide that news should only be written by the Secretary and approved by the PRO before it goes live or appears on the front-end side of the page. He can do this by setting up the necessary permissions without any coding, which will be explained later in the documentation.
 
-Accounts:
-Every Css Executive or appointee is given an Admitrator Acccount By the Eleccted Presisddent
-with each persimssion role on what they can do on System, what they are allow to see and not to see etc... all set up during the creation of the account with thier email, phone and a custom password that they can chnage later. when the account is created an email is sent to thier the email (the one they provided) where they can login into the system and chnage the custom passwod given to them and start work right away
+PLEASE CALL FOR ANY FURTHER QUESTIONS, AS SOME FEATURES GO INTO MUCH MORE DETAIL PRACTICALLY.
 
-NB: Misuse of the account or position will prompt the president to deactivate your account(not delete ) which can actiavted later with carefull considerations
+Accounts: Every CSS Executive or appointee is given an Administrator account by the elected President, with each permission role specifying what they can do on the system, what they are allowed to see, and what they cannot see. These permissions are set up during account creation, along with their email, phone number, and a custom password that they can change later. When the account is created, an email is sent to the email address provided, allowing them to log in, change their custom password, and begin working right away.
 
-PLEASE CALL FOR ANY FURTHER SINCE SOME FEATURES GO MUCH INTO DETAIL PRATICALLY
+Note: Misuse of the account or position will prompt the President to deactivate the account (not delete it), which can later be reactivated after careful consideration.
 
-Acadamcics and Resources:
-The system comes with an acadamic section. On this section the executive who is in charge on acadamics or the presidents create courses that they think students need resources on. after the courses are created rousource links like youtube videos, artitcles, and FIles like slides pdfs can be added to the courses when approved by the president then they are displayed on the front for students to serch through and use. These Files will be kept till they are deleted from the database. files like pasco with be on the platform for years and years to come until deleted
+PLEASE CALL FOR ANY FURTHER QUESTIONS, AS SOME FEATURES GO INTO MUCH MORE DETAIL PRACTICALLY.
 
-NOTE:THE PRESDNETIAL OR ACADAMIC BOARD APPROVAL IS NEEDE BEFORE THE RESOUSRCE IS SHOWED SINCE WE WOOULDNT WANT ANY SHADY LINKS TO BE DESIPLAYED TO STUDENTS
+Academics and Resources: The system includes an academic section. In this section, the executive in charge of academics or the President can create courses that they believe students need resources for. After the courses are created, resource links such as YouTube videos, articles, and files (e.g., slides, PDFs) can be added to the courses after approval by the President. These resources will then be displayed on the front-end for students to search through and use. These files will remain until they are deleted from the database. Files, like past resources, will remain on the platform for years unless deleted.
 
-PLEASE CALL FOR ANY FURTHER SINCE SOME FEATURES GO MUCH INTO DETAIL PRATICALLY
+Note: The President or the Academic Board's approval is needed before the resource is displayed, as we wouldn't want any shady links shown to students.
 
-Events:
-Events and programs section gives persmiasions to who ever in in charge to be wirte about upcoming events in the derpartment with pictures and videos
+PLEASE CALL FOR ANY FURTHER QUESTIONS, AS SOME FEATURES GO INTO MUCH MORE DETAIL PRACTICALLY.
 
-PLEASE CALL FOR ANY FURTHER SINCE SOME FEATURES GO MUCH INTO DETAIL PRATICALLY
+Events: The Events and Programs section grants permissions to those in charge to write about upcoming events in the department, along with pictures and videos.
 
-Timeline:
-The timeline is the history of the derpartment where after every event and program that happens, the pictures and videos from the program and posteed on the platform and the student names are tagged.if approved byt the presiden this are dispayed for the public and cummuinty. The aim of this feature is to have memeoeires at the department where even if i went to a partivular program during my year and got my pictures taken even after 10 years time i can still go to the timeline section and serch my name and see the particular event i went to and the pictures i took. Pictures can be taken off the timeline with special request from the user with the reason in a letter and if appprved will be taken down
+PLEASE CALL FOR ANY FURTHER QUESTIONS, AS SOME FEATURES GO INTO MUCH MORE DETAIL PRACTICALLY.
 
-PLEASE CALL FOR ANY FURTHER SINCE SOME FEATURES GO MUCH INTO DETAIL PRATICALLY
+Timeline: The Timeline is a history of the department. After every event or program, pictures and videos are posted on the platform, with student names tagged. If approved by the President, these are displayed to the public and community. The goal of this feature is to preserve memories for the department, so that even years later, a student can search their name and see the event they attended and the pictures taken. Pictures can be removed from the timeline by special request from the user, along with a letter explaining the reason. If approved, they will be taken down.
 
-News:
-Just like the event this section of the system is where the news are wttrien on the admin dhasboard and publihed news do not need to be hard cooded anytime news come up.Every news written by the departemt will deisplayed here for students to read.
+PLEASE CALL FOR ANY FURTHER QUESTIONS, AS SOME FEATURES GO INTO MUCH MORE DETAIL PRACTICALLY.
 
-PLEASE CALL FOR ANY FURTHER SINCE SOME FEATURES GO MUCH INTO DETAIL PRATICALLY
+News: Similar to events, this section of the system is where news is written on the admin dashboard. Published news doesn't need to be hardcoded, and any news written by the department will be displayed here for students to read.
 
-Advertisements:
-On the bussiness side ads can be runed here for money to spnosor the dapartment if needed be. these ads are control by the department and dislayed on the news site event annoutments etc. when approved
+PLEASE CALL FOR ANY FURTHER QUESTIONS, AS SOME FEATURES GO INTO MUCH MORE DETAIL PRACTICALLY.
 
-PLEASE CALL FOR ANY FURTHER SINCE SOME FEATURES GO MUCH INTO DETAIL PRATICALLY
+Advertisements: On the business side, ads can be run to generate money to sponsor the department if needed. These ads are controlled by the department and displayed on news sites, event announcements, etc., once approved.
 
-History:
-The system records any activity that went on the admin dashbord for feedback reasons and the last time person who login. The accounts are arranged in the last person who login order with the latest person who login on top.
+PLEASE CALL FOR ANY FURTHER QUESTIONS, AS SOME FEATURES GO INTO MUCH MORE DETAIL PRACTICALLY.
 
-PLEASE CALL FOR ANY FURTHER SINCE SOME FEATURES GO MUCH INTO DETAIL PRATICALLY
+History: The system records any activity that happens on the admin dashboard for feedback purposes, as well as the last person who logged in. Accounts are arranged by the most recent logins, with the latest login appearing at the top.
 
-THE PLAN:
-THE FRONTEND OF THE SYSTEM WILL BE OPENED SOURCE FOR STUDENT TO CONTRIBUTE. THE BACKEND SYSTEM ITSELF WILL MAINTAIN BY CORE STUDENTS FOR ACADAMICS PURPOSESE(HANDS ON PRATICAL TO WORK ON A LIVE PROJECT TO GIVE STUDNETS THE CONFIDENCE )
+PLEASE CALL FOR ANY FURTHER QUESTIONS, AS SOME FEATURES GO INTO MUCH MORE DETAIL PRACTICALLY.
+
+The Plan: The frontend of the system will be open-source for students to contribute to. The backend system will be maintained by core students for academic purposes (hands-on practical experience to work on a live project, giving students the confidence to tackle real-world systems).
