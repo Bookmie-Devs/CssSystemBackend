@@ -21,4 +21,4 @@ class Advertisement(models.Model):
         verbose_name_plural = _("Advertisements")
 
     def __str__(self):
-        return self.name
+        return self.brand
