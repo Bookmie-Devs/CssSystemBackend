@@ -10,13 +10,14 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
+from logging import root
 from pathlib import Path
 from CssSystem.config import *
 from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -94,7 +95,7 @@ WSGI_APPLICATION = "CssSystem.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "css_db.sqlite3",
+        "NAME": ROOT_DIR / "css_db.sqlite3",
     }
 }
 
@@ -154,6 +155,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 AUTH_USER_MODEL = "accounts.CustomUser"
 
 
-MEDIA_ROOT = BASE_DIR / "media"
+MEDIA_ROOT = ROOT_DIR / "media"
 
 MEDIA_URL = "/media/"

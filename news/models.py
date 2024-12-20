@@ -17,7 +17,7 @@ class News(models.Model):
     report = models.TextField()
     head_image = models.ImageField(upload_to="news", null=True, blank=True)
     back_image = models.ImageField(upload_to="news", null=True, blank=True)
-    views = models.IntegerField()
+    views = models.IntegerField(default=0)
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True, null=True)
     last_updted = models.DateTimeField(auto_now=True, auto_now_add=False, null=True)
 
