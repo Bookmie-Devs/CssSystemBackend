@@ -6,6 +6,7 @@ from examination_system.models import ExaminationSchedule
 
 # Register your models here.
 class ExaminationScheduleAdmin(admin.ModelAdmin):
+    list_display = ["course", "college", "room", "time"]
     list_filter = [
         "course",
         "college",
