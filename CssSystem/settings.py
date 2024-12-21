@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
-from logging import root
 from pathlib import Path
 from CssSystem.config import *
 from decouple import config
@@ -48,7 +47,10 @@ INSTALLED_APPS = [
     "executives",
     "acadamics",
     "news",
+    "phonenumber_field",
     "advertisements",
+    "django_google_maps",
+    "examination_system",
 ]
 
 MIDDLEWARE = [
@@ -63,7 +65,9 @@ MIDDLEWARE = [
 
 
 REST_FRAMEWORK = {
-    # YOUR SETTINGS
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ),
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
 

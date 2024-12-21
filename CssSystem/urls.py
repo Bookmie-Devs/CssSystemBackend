@@ -1,4 +1,5 @@
 """
+
 URL configuration for CssSystem project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -27,6 +28,7 @@ from drf_spectacular.views import (
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("accounts/", include("accounts.urls"), name="accounts"),
     path("news/", include("news.urls"), name="news"),
     path("acadamics/", include("acadamics.urls"), name="acadamics"),
     path("timeline/", include("timeline.urls"), name="timeline"),

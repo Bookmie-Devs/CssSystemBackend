@@ -20,7 +20,10 @@ class CustomUserAdmin(admin.ModelAdmin):
     search_fields = ["first_name", "last_name", "phone", "email"]
 
     fieldsets = (
-        ("Identity", {"fields": ("email",)}),
+        (
+            "Identity",
+            {"fields": ("index_number",)},
+        ),
         (
             _("Personal info"),
             {
@@ -36,6 +39,7 @@ class CustomUserAdmin(admin.ModelAdmin):
             {
                 "fields": (
                     "groups",
+                    "phone_confirm",
                     "user_permissions",
                     "is_active",
                     "is_staff",
