@@ -34,6 +34,6 @@ def user_profile_service(request, serializer_classes):
     # bad = status.HTTP_400_BAD_REQUEST
     user = request.user
     serializer = serializer_classes["user"](user)
-    # exams = serializer_classes["exams"](exams_repo.get_exam_schedules())
-    context = {"user": serializer.data,}
+    exams = serializer_classes["exams"](exams_repo.get_exam_schedules(), many=True)
+    context = {"user": serializer.data, "exams": exams.data}
     return (ok, context)
