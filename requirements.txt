@@ -1,6 +1,7 @@
 asgiref==3.8.1
 attrs==24.2.0
 Django==4.2.7
+django-cors-headers==4.6.0
 django-google-maps==0.13.0
 django-jazzmin==3.0.1
 django-phonenumber-field==8.0.0
