@@ -18,4 +18,10 @@ class AccountSignupSerializer(ModelSerializer):
 class AccountProfileSerializer(ModelSerializer):
     class Meta:
         model = CustomUser
-        exclude = ("is_staff","password","groups", "is_superuser", "user_permissions",)
+        exclude = (
+            "is_staff",
+            "password",
+            "groups",
+            "is_superuser",
+            "user_permissions",
+        )
