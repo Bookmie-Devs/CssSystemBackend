@@ -10,23 +10,11 @@ The system is divided into the following sections:
 
 - **Accounts and Permissions Management**
 - **Academics and Resources**
+- **Exam Allocation System**
 - **Events and News**
 - **Timeline and Executive Position History (Achievements)**
 - **Advertisements**
 - **And More**
-
-### Permissions Management
-
-Each section of the system has specific permissions that are set up by the President or the current members in office. Permissions define what each administrator role is allowed to do in the system, such as who can create news, approve resources, or write event details.
-
-For example:
-
-- The President may decide that only the Secretary can write news, and it must be approved by the PRO before it goes live.
-- These permissions can be set up without requiring coding, and detailed instructions will be provided in the documentation.
-
-### **Note:**
-
-If you have any questions or need further clarification on specific features, feel free to reach out, as some features are explained in more detail practically.
 
 ---
 
@@ -54,6 +42,95 @@ This section allows the President or the executive in charge of academics to cre
 ### **Note:**
 
 - The President or the Academic Board must approve resources before they are displayed, as only trusted content is shared with students.
+
+---
+
+## Exam Allocation System
+
+The **Exam Allocation System** is a comprehensive platform built to manage the allocation of examination locations to students. It ensures that students receive timely information about their assigned exam venues, the corresponding exam times, and relevant details such as maps and coordinates. Administrators can efficiently control and manage exam allocations, making the entire process smooth and transparent. The system also ensures that all notifications, including exam details and location data, are automatically sent to students.
+
+### Sections:
+- **Exam Allocation and Management**
+- **Admin Dashboard and Controls**
+- **Notifications and Communication**
+- **Google Maps Integration**
+- **System Logs**
+
+---
+
+### **Exam Allocation and Management**
+
+This section allows the admin to manage and allocate exam locations to students. The process includes assigning specific locations (exam halls, rooms, etc.) and setting exam times for each student.
+
+- **Exam Location Assignment**: Admin assigns a specific location to each student (e.g., Room 101, Building A).
+- **Exam Time**: The admin can set specific exam start and end times for each student.
+- **Student Allocation**: Each student is allocated a unique exam location and time, which is saved and stored in the system.
+- **Student List**: The admin can view and manage a list of all students with their corresponding allocations.
+
+### **Note:**
+
+- Only authorized personnel (admin or designated executives) are permitted to modify or update the allocations to avoid errors or conflicts.
+
+---
+
+### **Admin Dashboard and Controls**
+
+The Admin Dashboard is the control center of the Exam Allocation System, providing administrators with an easy-to-use interface to manage all aspects of exam assignments.
+
+- **Examination Overview**: The admin can view all current and upcoming exam allocations for students, including their locations and times.
+- **Search and Filter Options**: The dashboard allows the admin to filter students by exam location, status (allocated, pending, etc.), and exam time.
+- **Modification and Reallocation**: The admin can reassign students to different locations or update exam times as necessary.
+- **Bulk Allocation**: The admin can assign exam locations to multiple students simultaneously (for example, for a particular department or course).
+
+### **Note:**
+
+- All changes made through the admin dashboard are automatically updated in the system and notified to the affected students.
+
+---
+
+### **Notifications and Communication**
+
+The system automatically sends out notifications to students once their exam locations and times are confirmed. The notifications contain all necessary details, such as:
+
+- **Exam Location**: Coordinates of the exam venue and its address.
+- **Exam Time**: The scheduled start and end time of the exam.
+- **Map Link**: A link to the location on Google Maps, making it easy for students to find their exam venue.
+
+The notification can be sent via:
+
+- **Email**: Automatically sent to each student with all relevant details.
+- **SMS** (if configured): A text message containing the basic details of the exam (location, time, and map link).
+
+### **Note:**
+
+- Students receive a single notification upon allocation, but the admin can manually resend notifications if any updates or changes are made to the exam details.
+
+---
+
+### **Google Maps Integration**
+
+This section allows students to access the exact location of their exam venue through an integrated Google Maps link.
+
+- The admin inputs the coordinates (latitude and longitude) for each exam location.
+- The system generates a Google Maps link that students can click to view the exam venue and plan their route accordingly.
+
+### **Note:**
+
+- Accurate coordinates are critical for proper map functionality. The admin must double-check location data before finalizing allocations.
+
+---
+
+### **System Logs**
+
+The system maintains a detailed log of all activities within the admin dashboard, including:
+
+- **Exam Allocation Changes**: Who made the changes and when.
+- **Notifications Sent**: Tracks which students were sent notifications and when.
+- **Student Status Updates**: Logs updates to student allocation status (e.g., reallocation, new times).
+
+### **Note:**
+
+- The logs serve as an important audit trail for administrators to track changes and maintain transparency.
 
 ---
 
@@ -98,3 +175,4 @@ The frontend of the system will be open-source, allowing students to contribute.
 ---
 
 **Note:** For any questions or further clarification on specific features, please feel free to reach out. Some features are explained in more detail practically.
+
