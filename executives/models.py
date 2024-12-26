@@ -22,6 +22,7 @@ class Executive(models.Model):
         editable=False,
         unique=True,
     )
+    image = models.ImageField(upload_to="profile_images", null=True)
     user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
     position = models.ForeignKey(ExecutivePosition, on_delete=models.CASCADE)
     office_from = models.DateTimeField(auto_now=False, auto_now_add=True, null=True)
@@ -31,10 +32,9 @@ class Executive(models.Model):
         return f"Mr. {self.user.first_name} {self.user.last_name}"
 
 
-class ExecutiveProfile(models.Model):
-    executive = models.ForeignKey(
-        Executive,
-        on_delete=models.CASCADE,
-        related_name="profiles",
-    )
-    image = models.ImageField(upload_to="profile_images", null=True)
+# class ExecutiveProfile(models.Model):
+#     executive = models.ForeignKey(
+#         Executive,
+#         on_delete=models.CASCADE,
+#         related_name="profiles",
+#     )

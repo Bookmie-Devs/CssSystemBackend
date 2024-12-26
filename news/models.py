@@ -15,6 +15,7 @@ class News(models.Model):
     title = models.CharField(max_length=100)
     reported_by = models.CharField(max_length=100)
     report = models.TextField()
+    minutes_read = models.IntegerField(default=0)
     head_image = models.ImageField(upload_to="news", null=True, blank=True)
     back_image = models.ImageField(upload_to="news", null=True, blank=True)
     views = models.IntegerField(default=0)

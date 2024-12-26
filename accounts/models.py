@@ -70,8 +70,8 @@ class CustomUser(AbstractUser):
 
 
 class PhoneVerifcationCodes(models.Model):
-    phone = PhoneNumberField(unique=True)
-    code = models.CharField(max_length=10)
+    phone = PhoneNumberField(unique=True, null=True, blank=False)
+    code = models.CharField(max_length=10, null=True, blank=False)
 
     class Meta:
         verbose_name = _("")

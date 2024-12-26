@@ -1,5 +1,5 @@
 from django.contrib import admin
-from executives.models import Executive, ExecutivePosition, ExecutiveProfile
+from executives.models import Executive, ExecutivePosition
 
 # Register your models here.
 
@@ -15,8 +15,3 @@ class ExecutiveAdmin(admin.ModelAdmin):
         return f"Mr. {obj.user.first_name} {obj.user.last_name}"
 
     list_display = ["official_name", "position", "is_active", "office_from"]
-
-
-@admin.register(ExecutiveProfile)
-class ExecutiveProfilesAdmin(admin.ModelAdmin):
-    list_display = ["executive", "image"]

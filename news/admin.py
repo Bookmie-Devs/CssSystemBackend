@@ -19,6 +19,7 @@ class NewsAdmin(admin.ModelAdmin):
                 "fields": (
                     "title",
                     "report",
+                    "minutes_read",
                 ),
             },
         ),
