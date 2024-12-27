@@ -13,12 +13,15 @@ def register_service(request, serializer_class):
         first_name = serializer.validated_data["first_name"]
         last_name = serializer.validated_data["last_name"]
         password = serializer.validated_data["password"]
+        graduation_year = serializer.validated_data["graduation_year"]
+
         repo.create_user(
             phone=phone,
             first_name=first_name,
             last_name=last_name,
             index_number=index_number,
             password=password,
+            graduation_year=graduation_year,
         )
         context = {
             "status": "success",
@@ -34,6 +37,8 @@ def user_profile_service(request, serializer_classes):
     # bad = status.HTTP_400_BAD_REQUEST
     user = request.user
     serializer = serializer_classes["user"](user)
-    exams = serializer_classes["exams"](exams_repo.get_exam_schedules(), many=True)
+    exams = serializer_classes["exams"](
+        exams_repo.get_exam_schedules(level=user.get_level()), many=True
+    )
     context = {"user": serializer.data, "exams": exams.data}
     return (ok, context)

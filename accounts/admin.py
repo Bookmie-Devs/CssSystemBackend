@@ -22,7 +22,12 @@ class CustomUserAdmin(admin.ModelAdmin):
     fieldsets = (
         (
             "Identity",
-            {"fields": ("index_number",)},
+            {
+                "fields": (
+                    "index_number",
+                    "graduation_year",
+                )
+            },
         ),
         (
             _("Personal info"),

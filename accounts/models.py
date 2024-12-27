@@ -3,13 +3,21 @@ from django.contrib.auth.models import AbstractUser, BaseUserManager
 from phonenumber_field.modelfields import PhoneNumberField
 from django.utils.translation import gettext_lazy as _
 from uuid import uuid4
+from django.utils import timezone
 
 # Create your models here.
 
 
 class CustomUserManager(BaseUserManager):
     def create_user(
-        self, first_name, last_name, index_number, phone, password, **extra_fields
+        self,
+        first_name,
+        last_name,
+        index_number,
+        graduation_year,
+        phone,
+        password,
+        **extra_fields,
     ):
         """
         Create and save a user with the given email and password.
@@ -21,6 +29,7 @@ class CustomUserManager(BaseUserManager):
             last_name=last_name,
             index_number=index_number,
             phone=phone,
+            graduation_year=graduation_year,
             **extra_fields,
         )
         user.set_password(password)
@@ -48,9 +57,13 @@ class CustomUser(AbstractUser):
     username = None
     id = models.UUIDField(primary_key=True, unique=True, default=uuid4)
     phone = PhoneNumberField(unique=True)
-    index_number = models.CharField(
-        _("index number"), null=True, unique=True, max_length=255
-    )
+    index_number = models.CharField(_("index number"), unique=True, max_length=255)
+    """
+    dont take user level which becomes complicated since it has
+    to be incraesed every year for each user which will affect the system perfomance
+    """
+    # current year subtracted from graduation_year will give you the user level
+    graduation_year = models.IntegerField()
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
     phone_confirm = models.BooleanField(default=False)
@@ -60,6 +73,13 @@ class CustomUser(AbstractUser):
     REQUIRED_FIELDS = ["first_name", "last_name", "phone"]
 
     objects = CustomUserManager()
+
+    def get_level(self):
+        try:
+            # levels should be in hundreds
+            return f"{(int(self.graduation_year) - int(timezone.now().year))*100}"
+        except Exception:
+            return timezone.now().year
 
     def __str__(self) -> str:
         return f"{self.phone}"

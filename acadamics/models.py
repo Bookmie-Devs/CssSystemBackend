@@ -16,7 +16,8 @@ class Course(models.Model):
     course_id = models.UUIDField(
         primary_key=True, unique=True, default=uuid4, editable=False
     )
-    course_name = models.CharField(max_length=200)
+    course_name = models.CharField(max_length=200, null=True, blank=False)
+    course_code = models.CharField(max_length=200)
     level = models.IntegerField()
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
     last_updated = models.DateTimeField(auto_now=True, auto_now_add=False)

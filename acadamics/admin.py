@@ -6,7 +6,7 @@ from acadamics.models import Course, OnlineTutorialTips, AcadamicSlides, PastQue
 
 @admin.register(Course)
 class CourseAdmin(admin.ModelAdmin):
-    list_display = ["course_name", "level", "created_at"]
+    list_display = ["course_code", "course_name", "level", "created_at"]
 
 
 @admin.register(OnlineTutorialTips)

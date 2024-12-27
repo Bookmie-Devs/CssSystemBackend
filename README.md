@@ -2,21 +2,34 @@
 
 ## Overview
 
-The CSS Administration System is a platform designed to manage the various roles and responsibilities within the CSS Department. It is organized into sections corresponding to different levels of access, ensuring proper permissions are granted to each role. The system allows the President, or the Admin (acting as a proxy when the President is unavailable), to manage these permissions effectively.
+The CSS Administration System is a platform designed to manage the various roles and responsibilities within the CSS Department. It is organized into sections corresponding to different levels of access, ensuring proper permissions are granted to each role. The system allows the President, or the Admin (acting as a proxy when the President is unavailable), to manage these permissions and all aspects of the system effectively.
 
+## Executives Admin Control System
+(Controls the site from news, blogs, events to educational resources which are regulated by the right executive in charge)
+(An Executive assign to a Group only views, edit or create entities the group has permissions base on rules set by the system admin(President or Proxy); more about this in the permissions section)
+![Image Description](./.readme_assets/admin_home.png)
+
+## Department Site
+![frontend view](./.readme_assets/frontend.png)
 ## Sections
 
-The system is divided into the following sections:
+The system is divided into the following sections from the admin to the frontend:
 
 - **Accounts and Permissions Management**
 - **Academics and Resources**
+![frontend view](./.readme_assets/aca.png)
 - **Exam Allocation System**
 - **Events and News**
+![frontend view](./.readme_assets/events.png)
 - **Timeline and Executive Position History (Achievements)**
 - **Advertisements**
 - **And More**
 
+![Image Description](./.readme_assets/admin_home_2.png)
+
 ---
+## The Backend Sytem Admin(President) controls permissions and apis the frontend⬇️  has access to 
+
 
 ## Accounts and Permissions Management
 
@@ -135,7 +148,7 @@ The system maintains a detailed log of all activities within the admin dashboard
 ---
 
 ## Events and News
-
+![pic](./.readme_assets/news.png)
 The Events and Programs section grants permissions to those in charge to write about upcoming events in the department, along with pictures and videos. This allows the department to keep students informed about upcoming activities.
 
 ---

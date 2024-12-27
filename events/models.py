@@ -9,7 +9,8 @@ class Event(models.Model):
         primary_key=True, unique=True, default=uuid4, editable=False
     )
     decription = models.TextField()
-    event_flyer = models.ImageField(upload_to="event_flyers")
+    event_image_1 = models.ImageField(upload_to="event_images", null=True)
+    event_image_2 = models.ImageField(upload_to="event_images", null=True)
     event_date = models.DateTimeField(null=True, blank=False)
     organised_by = models.CharField(max_length=200)
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True)

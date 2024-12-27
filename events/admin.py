@@ -9,11 +9,11 @@ from django.utils.html import format_html
 class EventAdmin(admin.ModelAdmin):
     ordering = ["-event_date"]
 
-    def _event_flyer(self, obj):
+    def _event_img(self, obj):
         return format_html(
             '<a href={}><img src="{}" width="50" height="50" /></a>',
-            obj.event_flyer.url,
-            obj.event_flyer.url,
+            obj.event_image_1.url,
+            obj.event_image_1.url,
         )
 
-    list_display = ["event_name", "_event_flyer", "organised_by", "event_date"]
+    list_display = ["event_name", "_event_img", "organised_by", "event_date"]
