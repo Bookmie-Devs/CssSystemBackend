@@ -36,7 +36,9 @@ class CustomUserManager(BaseUserManager):
         user.save()
         return user
 
-    def create_superuser(self, index_number, phone, password, **extra_fields):
+    def create_superuser(
+        self, index_number, graduation_year, phone, password, **extra_fields
+    ):
         """
         Create and save a SuperUser with the given email and password.
         """
@@ -49,7 +51,11 @@ class CustomUserManager(BaseUserManager):
         if extra_fields.get("is_superuser") is not True:
             raise ValueError(_("Superuser must have is_superuser=True."))
         return self.create_user(
-            phone=phone, index_number=index_number, password=password, **extra_fields
+            phone=phone,
+            index_number=index_number,
+            password=password,
+            graduation_year=graduation_year,
+            **extra_fields,
         )
 
 
@@ -70,7 +76,7 @@ class CustomUser(AbstractUser):
 
     USERNAME_FIELD = "index_number"
 
-    REQUIRED_FIELDS = ["first_name", "last_name", "phone"]
+    REQUIRED_FIELDS = ["first_name", "last_name", "graduation_year", "phone"]
 
     objects = CustomUserManager()
 
