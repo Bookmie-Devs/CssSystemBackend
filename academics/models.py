@@ -17,7 +17,7 @@ class Course(models.Model):
         primary_key=True, unique=True, default=uuid4, editable=False
     )
     course_name = models.CharField(max_length=200, null=True, blank=False)
-    course_code = models.CharField(max_length=200)
+    course_code = models.CharField(max_length=200, unique=True)
     level = models.IntegerField()
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
     last_updated = models.DateTimeField(auto_now=True, auto_now_add=False)
@@ -46,7 +46,7 @@ class OnlineTutorialTips(models.Model):
         return f"{self.course.course_name} Online Tip"
 
 
-class AcadamicSlides(models.Model):
+class AcademicSlides(models.Model):
     course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name="slides")
     file = models.FileField(_("Sildes"), upload_to="slides", max_length=100)
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
@@ -55,10 +55,12 @@ class AcadamicSlides(models.Model):
 
     class Meta:
         # verbose_name = _("")
-        verbose_name_plural = _("Acadamic Slides")
+        # db_table = "academics slides"
+        verbose_name_plural = _("Academic Slides")
 
     def __str__(self) -> str:
         return f"{self.course.course_name} Slide"
+
 
 
 class PastQuestions(models.Model):

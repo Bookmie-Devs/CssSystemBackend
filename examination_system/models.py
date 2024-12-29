@@ -1,5 +1,5 @@
 from django.db import models
-from acadamics.models import Course
+from academics.models import Course
 from uuid import uuid4
 from django_google_maps import fields as map_fields
 

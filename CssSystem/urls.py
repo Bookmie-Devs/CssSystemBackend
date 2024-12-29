@@ -30,7 +30,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("accounts/", include("accounts.urls"), name="accounts"),
     path("news/", include("news.urls"), name="news"),
-    path("acadamics/", include("acadamics.urls"), name="acadamics"),
+    path("academics/", include("academics.urls"), name="academics"),
     path("timeline/", include("timeline.urls"), name="timeline"),
     path("executives/", include("executives.urls"), name="execs"),
     path("events/", include("events.urls"), name="events"),

@@ -1,4 +1,4 @@
-from acadamics.models import Course, AcadamicSlides, PastQuestions, OnlineTutorialTips
+from academics.models import Course, AcademicSlides, PastQuestions, OnlineTutorialTips
 
 
 class CourseRepository:
@@ -10,7 +10,7 @@ class CourseRepository:
 
 
 class SlidesRepository:
-    model = AcadamicSlides.objects
+    model = AcademicSlides.objects
 
     @classmethod
     def get_slides(cls, course_id):

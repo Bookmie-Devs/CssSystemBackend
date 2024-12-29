@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     "timeline",
     "events",
     "executives",
-    "acadamics",
+    "academics",
     "news",
     "phonenumber_field",
     "advertisements",

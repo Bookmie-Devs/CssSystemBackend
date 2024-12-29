@@ -1,6 +1,6 @@
 from rest_framework.serializers import Serializer, ModelSerializer
 from examination_system.models import ExaminationSchedule
-from acadamics.serializers import CourseSerializer
+from academics.serializers import CourseSerializer
 
 
 class ExaminationScheduleSerializer(ModelSerializer):

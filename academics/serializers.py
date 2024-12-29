@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer, Serializer
-from acadamics.models import Course, AcadamicSlides, OnlineTutorialTips, PastQuestions
+from academics.models import Course, AcademicSlides, OnlineTutorialTips, PastQuestions
 
 
 class CourseSerializer(ModelSerializer):
@@ -10,7 +10,7 @@ class CourseSerializer(ModelSerializer):
 
 class SlidesSerializer(ModelSerializer):
     class Meta:
-        model = AcadamicSlides
+        model = AcademicSlides
         fields = "__all__"
 
 

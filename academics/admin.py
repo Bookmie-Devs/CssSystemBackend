@@ -1,5 +1,5 @@
 from django.contrib import admin
-from acadamics.models import Course, OnlineTutorialTips, AcadamicSlides, PastQuestions
+from academics.models import Course, OnlineTutorialTips, AcademicSlides, PastQuestions
 
 # Register your models here.
 
@@ -14,8 +14,8 @@ class OnlineTutorialTipsAdmin(admin.ModelAdmin):
     list_display = ["course", "created_at", "approved"]
 
 
-@admin.register(AcadamicSlides)
-class AcadamicSlidesAdmin(admin.ModelAdmin):
+@admin.register(AcademicSlides)
+class AcademicSlidesAdmin(admin.ModelAdmin):
     list_display = [
         "course",
         "file",

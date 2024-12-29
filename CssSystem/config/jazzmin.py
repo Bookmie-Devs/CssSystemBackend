@@ -78,9 +78,9 @@ JAZZMIN_SETTINGS = {
     "order_with_respect_to": [
         "auth",
         "accounts",
-        "acadamics.course",
-        "acadamics.acadamicslides",
-        "acadamics.pastquestions",
+        "academics.course",
+        "academics.acadamicslides",
+        "academics.pastquestions",
         "news",
         "examination_system",
         "executives.executive",

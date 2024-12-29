@@ -8,7 +8,7 @@ class Event(models.Model):
     event_id = models.UUIDField(
         primary_key=True, unique=True, default=uuid4, editable=False
     )
-    decription = models.TextField()
+    description = models.TextField()
     event_image_1 = models.ImageField(upload_to="event_images", null=True)
     event_image_2 = models.ImageField(upload_to="event_images", null=True)
     event_date = models.DateTimeField(null=True, blank=False)

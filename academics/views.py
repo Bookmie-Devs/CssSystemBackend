@@ -1,15 +1,14 @@
-from pickle import TRUE
 from django.shortcuts import render
-from acadamics.serializers import (
+from academics.serializers import (
     CourseSerializer,
     CourseResourceSerializer,
     OnlineTutorialTipsSerializer,
     PastQuestionsSerializer,
     SlidesSerializer,
 )
-from acadamics.repository import CourseRepository
+from academics.repository import CourseRepository
 from rest_framework.generics import ListAPIView
-from acadamics.repository import (
+from academics.repository import (
     OnlineTutorialTipsRepository,
     SlidesRepository,
     PastQuestionsRepository,
