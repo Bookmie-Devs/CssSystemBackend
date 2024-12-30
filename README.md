@@ -169,6 +169,7 @@ The goal of this feature is to preserve memories of department activities. Even 
 
 This information is controlled and provided by the administrators which is managed and changed in every change in executives
 Executives account and changed to inactive after thier time in office and new roles are given after the neccessary permissions are assign
+
 ---
 
 ## News And Blogs
