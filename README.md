@@ -148,8 +148,8 @@ The system maintains a detailed log of all activities within the admin dashboard
 
 ---
 
-## Events and News
-![pic](./.readme_assets/news.png)
+## Upcoming Events
+![pic](./.readme_assets/events.png)
 The Events and Programs section grants permissions to those in charge to write about upcoming events in the department, along with pictures and videos. This allows the department to keep students informed about upcoming activities.
 
 ---
@@ -174,7 +174,10 @@ Executives account and changed to inactive after thier time in office and new ro
 
 ## News And Blogs
 ![Image Description](./.readme_assets/news_read.png)
-![Image Description](./.readme_assets/news_read2.png.png)
+![Image Description](./.readme_assets/news_read2.png)
+
+## News and Blogs Feed
+![Image](./.readme_assets/news.png)
 Similar to events, this section is where news related to the department and blogs about Tech are written on the admin dashboard by individuals who permissions assign to them by the P.R.O Commitee. The news and blogs are published dynamically, so it doesn't need to be hardcoded each time. News and blog updates are automatically displayed for students to read.
 
 ---
