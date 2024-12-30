@@ -47,7 +47,8 @@ Every CSS Executive or appointee is provided with an Administrator account by th
 ![frontend view](./.readme_assets/aca.png)
 This section allows the President or the executive in charge of academics to create courses and add resources that students need. Resources such as YouTube videos, articles, and files (e.g., slides, PDFs) can be added to these courses after the President's or academics administrators approval.
 ![courses view](./.readme_assets/courses.png)
-- Courses are created first before academic resourcre can be assign to them
+- Please note that Courses are created first before academic resourcre can be assign to them
+- Resources inlcude the following you see below
 ![resources](./.readme_assets/resoursces.png)
 - Once approved, resources will be made available on the front-end for students to browse and use.
 
