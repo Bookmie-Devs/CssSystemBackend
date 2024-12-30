@@ -30,11 +30,11 @@ The system is divided into the following sections from the admin to the frontend
 
 ## Accounts and Permissions Management
 
-Every CSS Executive or appointee is provided with an Administrator account by the elected President. During account creation, permissions are set according to the user's role. The account details, such as email, phone number, and a custom password, are provided, and the user can change their password later.
+Every CSS Executive or appointee is provided with an Administrator account by the elected President or Proxy Administrator. During account creation, permissions are set according to the user's role. The account details, such as email, phone number, and a custom password, are provided, and the user can change their password later.
 
-### **Account Activation:**
+### **Account Activation For Executives:**
 
-- Once the account is created, an email is sent with login credentials, allowing the user to log in, change their password, and start working right away.
+- Executives without account on the system are required to signup as regular students on the fronted and later request to have excutive access to the admin system. By then their is already in the system and all the Presidents administor has to do is make them staff and assign the required permissions to them, allowing them to log into the admin and start working right away.
 
 ### **Account Misuse:**
 
@@ -45,6 +45,8 @@ Every CSS Executive or appointee is provided with an Administrator account by th
 ### Managing Executive Groups and Permissions
 
 In the CSS System, **Executive Groups** and **Permissions** are used to control the level of access different users have within the system. This section explains how to manage these groups and permissions for the members of your society.
+
+![exec_groups](./.readme_assets/groups_perm.png)
 
 #### Understanding Executive Groups
 
@@ -96,10 +98,18 @@ To remove a permission, simply uncheck the relevant box and save the changes.
 
 After creating or editing an **Executive Group** and its permissions, you can assign users to that group:
 
+![user groups](./.readme_assets/user_groups.png)
+
 1. Go to the **Users** section in the CSS System.
 2. Select the user you want to modify.
 3. In the **Groups** section of the user's profile, select the appropriate group (e.g., **Executive Board**, **General Members**, **Visitors**).
 4. Click **Save** to apply the changes.
+
+![assign groups mennu](./.readme_assets/assign_groups_menu.png)
+
+#### Users can also be assign personal Permissions for specific entities without adding them to a groups
+
+![personal perm](./.readme_assets/personal_perm.png)
 
 #### Best Practices for Managing Executive Groups and Permissions
 
@@ -132,9 +142,12 @@ Here’s a common setup for **Executive Groups** and permissions:
 
 Every CSS Executive or appointee is provided with an Administrator account by the elected President. During account creation, permissions are set according to the user's role. The account details, such as email, phone number, and a custom password, are provided, and the user can change their password later.
 
-### **Account Activation:**
+### **Account Activation For Executive:**
 
-- Once the account is created, an email is sent with login credentials, allowing the user to log in, change their password, and start working right away.
+- Newly elected executives should have and account on the platform and if they dont, they should signup on the frontend which in case will allow thier info to be in the Sytem 
+- The above step is required to allow the user to input his details and password him/her self in other to prevent unneccesary password reseting if the details and password are inputed by the administrator
+- After the account is already in the database, the President or the system administrator will then assign the neccesary permissions and groups to that account depending on their appointement or executive role
+- allowing the user to log into the admin side as staff and start working right away.
 
 ### **Account Misuse:**
 
