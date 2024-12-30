@@ -17,10 +17,8 @@ The system is divided into the following sections from the admin to the frontend
 
 - **Accounts and Permissions Management**
 - **Academics and Resources**
-![frontend view](./.readme_assets/aca.png)
 - **Exam Allocation System**
 - **Events and News**
-![frontend view](./.readme_assets/events.png)
 - **Timeline and Executive Position History (Achievements)**
 - **Advertisements**
 - **And More**
@@ -46,7 +44,7 @@ Every CSS Executive or appointee is provided with an Administrator account by th
 ---
 
 ## Academics and Resources
-
+![frontend view](./.readme_assets/aca.png)
 This section allows the President or the executive in charge of academics to create courses and add resources that students need. Resources such as YouTube videos, articles, and files (e.g., slides, PDFs) can be added to these courses after the President's or academics administrators approval.
 
 - Once approved, resources will be made available on the front-end for students to browse and use.
