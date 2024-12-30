@@ -60,28 +60,16 @@ This section allows the President or the executive in charge of academics to cre
 
 ---
 
-## Exam Allocation System
-
-The **Exam Allocation System** is a comprehensive platform built to manage the allocation of examination locations to students. It ensures that students receive timely information about their assigned exam venues, the corresponding exam times, and relevant details such as maps and coordinates. Administrators can efficiently control and manage exam allocations, making the entire process smooth and transparent. The system also ensures that all notifications, including exam details and location data, are automatically sent to students.
-
-### Sections:
-- **Exam Allocation and Management**
-- **Admin Dashboard and Controls**
-- **Notifications and Communication**
-- **Google Maps Integration**
-- **System Logs**
-
----
 
 ### **Exam Allocation and Management**
 
-This section allows the admin to manage and allocate exam locations to students. The process includes assigning specific locations (exam halls, rooms, etc.) and setting exam times for each student.
-The system allows you to assign a range of numbers to a specific exam room which is then filtered and displayed to the user for his specific room and location on google maps.
+The **Exam Allocation Section** is a comprehensive platform built to manage the allocation of examination locations to students. It ensures that students receive timely information about their assigned exam venues, the corresponding exam times, and relevant details such as maps and coordinates. Administrators can efficiently control and manage exam allocations, making the entire process smooth and transparent. The system also ensures that all notifications, including exam details and location data, are automatically sent to students.
+
+![exam scheduled](./.readme_assets/exam_schedule.png)
 
 - **Exam Location Assignment**: Admin assigns a specific location to each student (e.g., Room 101, Building A).
 - **Exam Time**: The admin can set specific exam start and end times for each student.
-- **Student Allocation**: Each student is allocated a unique exam location and time, which is saved and stored in the system.
-- **Student List**: The admin can view and manage a list of all students with their corresponding allocations.
+- **Google Maps Integration**
 
 ### **Note:**
 
