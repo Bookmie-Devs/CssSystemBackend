@@ -30,6 +30,107 @@ The system is divided into the following sections from the admin to the frontend
 
 
 ## Accounts and Permissions Management
+## Accounts and Permissions Management
+
+Every CSS Executive or appointee is provided with an Administrator account by the elected President. During account creation, permissions are set according to the user's role. The account details, such as email, phone number, and a custom password, are provided, and the user can change their password later.
+
+### **Account Activation:**
+
+- Once the account is created, an email is sent with login credentials, allowing the user to log in, change their password, and start working right away.
+
+### **Account Misuse:**
+
+- If an account or position is misused, the President can deactivate the account (not delete it). The account can be reactivated after careful consideration.
+
+---
+
+### Managing Executive Groups and Permissions
+
+In the CSS System, **Executive Groups** and **Permissions** are used to control the level of access different users have within the system. This section explains how to manage these groups and permissions for the members of your society.
+
+#### Understanding Executive Groups
+
+**Executive Groups** are used to categorize users based on their roles. Each group has different levels of access (permissions), which are inherited by the users in that group.
+
+Common groups may include:
+
+- **Executive Board**: Full control over the system, including managing users and content.
+- **General Members**: Can view and create content but cannot delete or modify existing content.
+- **Visitors**: Can only view content, with no interaction or modification rights.
+
+#### Managing Executive Groups
+
+To create or manage **Executive Groups**:
+
+1. Navigate to the **Groups** section of the CSS System.
+2. You will see a list of existing groups (e.g., **Executive Board**, **General Members**, **Visitors**).
+3. To **create a new group**:
+   - Click on the **Add Group** button.
+   - Enter a name for the new group (e.g., "Event Coordinators").
+   - Click **Save** to create the group.
+4. To **edit an existing group**:
+   - Click on the group name.
+   - Add or remove users as needed.
+   - Modify the **permissions** associated with the group (explained below).
+   - Click **Save** to confirm changes.
+
+#### Managing Permissions for Executive Groups
+
+Permissions define the actions that users within a group can perform. These actions may include:
+
+- **View content**: The ability to see specific pages or data.
+- **Add content**: The ability to create new content or records.
+- **Edit content**: Modify existing content or settings.
+- **Delete content**: Remove data or content.
+
+#### Assigning Permissions to Groups
+
+To assign or modify permissions for a group:
+
+1. In the **Groups** section, click on the desired group.
+2. You will see a section called **Permissions**.
+3. Use the checkboxes to assign permissions like "Can view content," "Can add content," etc.
+4. Click **Save** to apply the changes.
+
+To remove a permission, simply uncheck the relevant box and save the changes.
+
+#### Assigning Users to Executive Groups
+
+After creating or editing an **Executive Group** and its permissions, you can assign users to that group:
+
+1. Go to the **Users** section in the CSS System.
+2. Select the user you want to modify.
+3. In the **Groups** section of the user's profile, select the appropriate group (e.g., **Executive Board**, **General Members**, **Visitors**).
+4. Click **Save** to apply the changes.
+
+#### Best Practices for Managing Executive Groups and Permissions
+
+- **Keep it simple**: Use clear and straightforward group names (e.g., **Executive Board**, **Members**, **Visitors**).
+- **Limit high-level permissions**: Only assign **Add**, **Edit**, and **Delete** permissions to users who require those capabilities. Most users should only need **View** or **Add** permissions.
+- **Review groups regularly**: Periodically check and update groups and their permissions to reflect changes in roles or responsibilities.
+
+#### Example Group and Permission Setup
+
+Here’s a common setup for **Executive Groups** and permissions:
+
+- **Executive Board**:
+  - Permissions: **Add**, **Edit**, **Delete**, **View**
+  - Users: Admins or key executives who manage content, users, and system settings.
+
+- **General Members**:
+  - Permissions: **Add**, **View**
+  - Users: Members who can contribute content (e.g., articles) but cannot delete or modify others' content.
+
+- **Visitors**:
+  - Permissions: **View** only
+  - Users: Guests who can browse the content but cannot interact with it.
+
+#### Summary
+
+- **Executive Groups** organize users by role and determine the actions they can perform.
+- **Permissions** define the scope of each group’s actions (view, add, edit, delete).
+- You can manage groups and permissions easily through the **Groups** and **Users** sections of the CSS System.
+- Regularly review your groups and permissions to ensure users have the appropriate level of access.
 
 Every CSS Executive or appointee is provided with an Administrator account by the elected President. During account creation, permissions are set according to the user's role. The account details, such as email, phone number, and a custom password, are provided, and the user can change their password later.
 
