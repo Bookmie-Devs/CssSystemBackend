@@ -26,10 +26,8 @@ The system is divided into the following sections from the admin to the frontend
 ![Image Description](./.readme_assets/admin_home_2.png)
 
 ---
-## The Backend Sytem Admin(President) controls permissions and apis the frontend⬇️  has access to 
+- Please Note: The Backend Sytem Admin(President) controls permissions and resources the frontend⬇️  has access to 
 
-
-## Accounts and Permissions Management
 ## Accounts and Permissions Management
 
 Every CSS Executive or appointee is provided with an Administrator account by the elected President. During account creation, permissions are set according to the user's role. The account details, such as email, phone number, and a custom password, are provided, and the user can change their password later.
