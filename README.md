@@ -47,7 +47,7 @@ Every CSS Executive or appointee is provided with an Administrator account by th
 
 ## Academics and Resources
 
-This section allows the President or the executive in charge of academics to create courses and add resources that students need. Resources such as YouTube videos, articles, and files (e.g., slides, PDFs) can be added to these courses after the President's approval.
+This section allows the President or the executive in charge of academics to create courses and add resources that students need. Resources such as YouTube videos, articles, and files (e.g., slides, PDFs) can be added to these courses after the President's or academics administrators approval.
 
 - Once approved, resources will be made available on the front-end for students to browse and use.
 - Files will remain in the system until manually deleted, and they may be available for years unless removed.
@@ -74,6 +74,7 @@ The **Exam Allocation System** is a comprehensive platform built to manage the a
 ### **Exam Allocation and Management**
 
 This section allows the admin to manage and allocate exam locations to students. The process includes assigning specific locations (exam halls, rooms, etc.) and setting exam times for each student.
+The system allows you to assign a range of numbers to a specific exam room which is then filtered and displayed to the user for his specific room and location on google maps.
 
 - **Exam Location Assignment**: Admin assigns a specific location to each student (e.g., Room 101, Building A).
 - **Exam Time**: The admin can set specific exam start and end times for each student.
@@ -136,7 +137,7 @@ This section allows students to access the exact location of their exam venue th
 ### **System Logs**
 
 The system maintains a detailed log of all activities within the admin dashboard, including:
-
+![Image Description](./.readme_assets/logs.png)
 - **Exam Allocation Changes**: Who made the changes and when.
 - **Notifications Sent**: Tracks which students were sent notifications and when.
 - **Student Status Updates**: Logs updates to student allocation status (e.g., reallocation, new times).
@@ -163,9 +164,17 @@ The goal of this feature is to preserve memories of department activities. Even 
 
 ---
 
-## News
+## Executive Positions and Info (github, linkdin, twitter etc)
+![execs](./.readme_assets/execs.png)
 
-Similar to events, this section is where news related to the department is written on the admin dashboard. The news is published dynamically, so it doesn't need to be hardcoded each time. News updates are automatically displayed for students to read.
+This information is controlled and provided by the administrators which is managed and changed in every change in executives
+Executives account and changed to inactive after thier time in office and new roles are given after the neccessary permissions are assign
+---
+
+## News And Blogs
+![Image Description](./.readme_assets/news_read.png)
+![Image Description](./.readme_assets/news_read2.png.png)
+Similar to events, this section is where news related to the department and blogs about Tech are written on the admin dashboard by individuals who permissions assign to them by the P.R.O Commitee. The news and blogs are published dynamically, so it doesn't need to be hardcoded each time. News and blog updates are automatically displayed for students to read.
 
 ---
 
