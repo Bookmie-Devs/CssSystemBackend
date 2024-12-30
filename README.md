@@ -1,5 +1,7 @@
 # CSS Administration System
 
+## Hosted On [](http://css.bookmie.com)
+
 ## Overview
 
 The CSS Administration System is a platform designed to manage the various roles and responsibilities within the CSS Department. It is organized into sections corresponding to different levels of access, ensuring proper permissions are granted to each role. The system allows the President, or the Admin (acting as a proxy when the President is unavailable), to manage these permissions and all aspects of the system effectively.
@@ -111,7 +113,7 @@ After creating or editing an **Executive Group** and its permissions, you can as
 
 ![personal perm](./.readme_assets/personal_perm.png)
 
-#### Best Practices for Managing Executive Groups and Permissions
+#### Best Practices for Managing Executive Groups and Permissions;
 
 - **Keep it simple**: Use clear and straightforward group names (e.g., **Executive Board**, **Members**, **Visitors**).
 - **Limit high-level permissions**: Only assign **Add**, **Edit**, and **Delete** permissions to users who require those capabilities. Most users should only need **View** or **Add** permissions.
