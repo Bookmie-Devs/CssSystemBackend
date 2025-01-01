@@ -26,13 +26,13 @@ class AcademicSlidesAdmin(admin.ModelAdmin):
         (
             "Course",
             {
-                "fields": ("course",),
+                "fields": ("course", "description",),
             },
         ),
         (
             "Slides",
             {
-                "fields": ("file",),
+                "fields": ("file", "approved",),
             },
         ),
     )
@@ -50,13 +50,13 @@ class PastQuestionsAdmin(admin.ModelAdmin):
         (
             "Course",
             {
-                "fields": ("course",),
+                "fields": ("course", "description",),
             },
         ),
         (
             "Pasco",
             {
-                "fields": ("file",),
+                "fields": ("file", "approved",), 
             },
         ),
     )
