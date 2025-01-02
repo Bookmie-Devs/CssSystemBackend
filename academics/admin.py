@@ -26,7 +26,7 @@ class AcademicSlidesAdmin(admin.ModelAdmin):
         (
             "Course",
             {
-                "fields": ("course", "description",),
+                "fields": ("course", "title",),
             },
         ),
         (
@@ -50,7 +50,7 @@ class PastQuestionsAdmin(admin.ModelAdmin):
         (
             "Course",
             {
-                "fields": ("course", "description",),
+                "fields": ("course", "title",),
             },
         ),
         (
