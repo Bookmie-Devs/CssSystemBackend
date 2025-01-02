@@ -34,7 +34,7 @@ class OnlineTutorialTips(models.Model):
         on_delete=models.CASCADE,
         related_name="online_tips",
     )
-    description = models.TextField(null=True, help_text="A simple description about the resource")
+    title = models.TextField(null=True, help_text="A simple title about the resource")
     link = models.URLField(("resource_link"), max_length=200)
     type_of_resource = models.CharField(choices=type_of_resource, max_length=50)
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
@@ -51,7 +51,7 @@ class OnlineTutorialTips(models.Model):
 
 class AcademicSlides(models.Model):
     course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name="slides")
-    description = models.TextField(null=True, help_text="A simple description about the resource")
+    title = models.TextField(null=True, help_text="A simple title about the resource")
     file = models.FileField(_("Sildes"), upload_to="slides", max_length=100)
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
     last_updated = models.DateTimeField(auto_now=True, auto_now_add=False)
@@ -71,7 +71,7 @@ class PastQuestions(models.Model):
     course = models.ForeignKey(
         Course, on_delete=models.CASCADE, related_name="past_questions"
     )
-    description = models.TextField(null=True, help_text="A simple description about the resource")
+    title = models.TextField(null=True, help_text="A simple title about the resource")
     file = models.FileField(_("Sildes"), upload_to="slides", max_length=100)
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
     last_updated = models.DateTimeField(auto_now=True, auto_now_add=False)
