@@ -85,7 +85,7 @@ class CustomUser(AbstractUser):
             # levels should be in hundreds
             return f"{(int(self.graduation_year) - int(timezone.now().year))*100}"
         except Exception:
-            return timezone.now().year
+            return "level unavailable, please check your graduation_year"
 
     def __str__(self) -> str:
         return f"{self.phone}"
