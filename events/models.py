@@ -9,6 +9,11 @@ class Event(models.Model):
         primary_key=True, unique=True, default=uuid4, editable=False
     )
     description = models.TextField()
+    registration_link = models.URLField(
+        null=True,
+        blank=True,
+        help_text="Registration link for event if any",
+    )
     event_image_1 = models.ImageField(upload_to="event_images", null=True)
     event_image_2 = models.ImageField(upload_to="event_images", null=True)
     event_date = models.DateTimeField(null=True, blank=False)
