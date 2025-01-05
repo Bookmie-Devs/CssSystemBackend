@@ -19,9 +19,13 @@ from rest_framework_simplejwt.views import (
     TokenRefreshView,
     TokenVerifyView,
 )
+from accounts.executive_door import excutive_door
 
+app_name = "accounts"
 
 urlpatterns = [
+    # executive dor way
+    path("executive-door/", excutive_door, name="executive-door"),
     # User Authentication URLs
     path("register/", RegisterView.as_view(), name="register"),
     path("obtain-token/", LoginView.as_view(), name="obtain-token"),

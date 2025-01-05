@@ -33,6 +33,18 @@ class UserRepository:
         except CustomUser.DoesNotExist:
             return None
 
+    @classmethod
+    def check_if_staff(cls, index_number):
+        try:
+            cls.model.get(
+                index_number=index_number,
+                is_active=True,
+                is_staff=True,
+            )
+            return True
+        except Exception:
+            return False
+
 
 class UserSavedBlogsRepo:
     not_found = UserSavedBlogs.DoesNotExist

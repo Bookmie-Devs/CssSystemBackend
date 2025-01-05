@@ -1,6 +1,10 @@
 # CSS Administration System
 
 ## Frontend Hosted On [css.bookmie.com](http://css.bookmie.com)
+## Frontend CodeBase [Here]()
+## Database Design []()
+## Backend Api Docs [Here](cssknust.pythonanywhere.com/api-docs/)
+## Backend FilsSystem [Here]()
 
 ## Overview
 
@@ -23,6 +27,7 @@ The system is divided into the following sections from the admin to the frontend
 - **Events and News**
 - **Timeline and Executive Position History (Achievements)**
 - **Advertisements**
+- **Products**
 - **And More**
 
 ![Image Description](./.readme_assets/admin_home_2.png)
@@ -32,7 +37,15 @@ The system is divided into the following sections from the admin to the frontend
 
 ## Accounts and Permissions Management
 
-Every CSS Executive or appointee is provided with an Administrator account by the elected President or Proxy Administrator. During account creation, permissions are set according to the user's role. The account details, such as email, phone number, and a custom password, are provided, and the user can change their password later.
+Every CSS Executive or appointee is provided with an Administrator account by the elected President or Proxy Administrator. During account creation, permissions are set according to the user's role. The account details, such as index number, phone number, and a custom password, are provided, and the user can change their password later.
+
+- The executive dashboard is only available to authorized executives and can be accessed during the login process on the department site as an option to login into executive dashboard.
+- Note That: The login page to the excutive dashboard can only seen after the system takes in your index number and verify that you are an active staff memeber after which you will be redirected to the login page of the executive dashboard(this is called the excutive door(this is called the excutive door).
+- Also Note: Student login to get access to thier saved blogs, saved past questions, saved slides and examination allocation map is different fromt the excutive dashboard login. Therefore sessions an token authentication for both is not the same
+
+#### Reccomended view for excutive dashboard
+- Due to the complex structring and different components available on the excutive dashboard, It is highly Reccomended to access the dashboard on a laptop to get the full view of all components.
+- Note That: This does not apply to the Derpartment site/front-end since it is highly responsive on all devices.
 
 ### **Account Activation For Executives:**
 

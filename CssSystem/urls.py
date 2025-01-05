@@ -26,14 +26,15 @@ from drf_spectacular.views import (
     SpectacularSwaggerView,
 )
 
+
 urlpatterns = [
-    path("admin/", admin.site.urls),
     path("accounts/", include("accounts.urls"), name="accounts"),
     path("news/", include("news.urls"), name="news"),
     path("exams/", include("examination_system.urls")),
     path("academics/", include("academics.urls"), name="academics"),
     path("timeline/", include("timeline.urls"), name="timeline"),
     path("executives/", include("executives.urls"), name="execs"),
+    path("executive-dashboard-cb/", admin.site.urls, name="executive-dashboard-cb"),
     path("events/", include("events.urls"), name="events"),
     path("ads/", include("advertisements.urls"), name="ads"),
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
