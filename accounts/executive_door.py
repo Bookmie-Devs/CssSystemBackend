@@ -6,12 +6,15 @@ from rest_framework.decorators import api_view
 from accounts.repository import UserRepository
 from rest_framework import status
 from rest_framework.response import Response
+from utils.utils import is_mobile
 
 
 @api_view(["POST"])
 def excutive_door(request: Request):
     index_number = request.data.get("index_number")
     is_executive = UserRepository.check_if_staff(index_number)
+    mobile = is_mobile(request)
+
     print(index_number, is_executive)
     if is_executive:
         executive_relative_path = "/executive-dashboard-cb/"
@@ -22,6 +25,11 @@ def excutive_door(request: Request):
             "is_executive": True,
             "executive_login": absolute_url,
         }
+        if mobile:
+            conext["mobile"] = True
+            conext["message"] = (
+                "It is recommended to access executive dashboard from laptop or desktop view"
+            )
         return Response(status=status.HTTP_200_OK, data=conext)
     else:
         conext = {
