@@ -3,6 +3,8 @@ from django.contrib.auth.models import AbstractUser, BaseUserManager
 from phonenumber_field.modelfields import PhoneNumberField
 from django.utils.translation import gettext_lazy as _
 from uuid import uuid4
+from news.models import News
+from academics.models import OnlineTutorialTips, AcademicSlides, PastQuestions
 from django.utils import timezone
 
 # Create your models here.
@@ -83,7 +85,9 @@ class CustomUser(AbstractUser):
     def get_level(self):
         try:
             # levels should be in hundreds
-            return f"{(int(self.graduation_year) - int(timezone.now().year))*100}"
+            diff = int(self.graduation_year) - int(timezone.now().year)
+            level = (4 - diff) * 100
+            return f"{level}"
         except Exception:
             return "level unavailable, please check your graduation_year"
 
@@ -107,7 +111,41 @@ class PhoneVerifcationCodes(models.Model):
         return str(self.code)
 
 
-status = [
-    ("info", "info"),
-    ("warning", "warning"),
-]
+class UserSavedBlogs(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    blogs = models.ManyToManyField(to=News)
+    created_at = models.DateTimeField(auto_now_add=True)
+    last_updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = "user_saved_blogs"
+
+
+class UserSavedSlides(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    slides = models.ManyToManyField(to=AcademicSlides)
+    created_at = models.DateTimeField(auto_now_add=True)
+    last_updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = "user_saved_slides"
+
+
+class UserSavedOnlineTutorialTips(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    links = models.ManyToManyField(to=OnlineTutorialTips)
+    created_at = models.DateTimeField(auto_now_add=True)
+    last_updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = "user_saved_online_tutorial_tips"
+
+
+class UserSavedPastQueations(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    past_questions = models.ManyToManyField(to=PastQuestions)
+    created_at = models.DateTimeField(auto_now_add=True)
+    last_updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = "user_saved_past_questions"

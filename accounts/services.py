@@ -1,6 +1,8 @@
 from accounts.repository import UserRepository
 from rest_framework import status
 from examination_system.repositories import ExamScheduleRepository
+from accounts.repository import UserSavedBlogsRepo
+from news.repository import NewsRepository
 
 
 def register_service(request, serializer_class):
@@ -42,3 +44,36 @@ def user_profile_service(request, serializer_classes):
     )
     context = {"user": serializer.data, "exams": exams.data}
     return (ok, context)
+
+
+def get_user_saved_blogs(request, serializer_class, *args, **kwargs):
+    ok = status.HTTP_200_OK
+    user = request.user
+    saved_blogs = UserSavedBlogsRepo.get_user_saved_blogs(user=user)
+    serializer = serializer_class(saved_blogs)
+    return ok, {
+        "status": "success",
+        "message": "user saved blogs",
+        "data": serializer.data,
+    }
+
+
+def delete_saved_blog(request, news_blog_id):
+    ok = status.HTTP_200_OK
+    bad = status.HTTP_400_BAD_REQUEST
+    not_found = status.HTTP_404_NOT_FOUND
+    user = request.user
+    news_blog = NewsRepository.get_news_blog(news_id=news_blog_id)
+    if news_blog is None:
+        return not_found, {
+            "status": "error",
+            "message": "No blogs exists",
+        }
+    saved_blogs = UserSavedBlogsRepo.get_user_saved_blogs(user=user)
+    saved_blogs.blogs.remove(news_blog)
+
+    context = {
+        "status": "Success",
+        "message": "Blog deleted from",
+    }
+    return ok, context

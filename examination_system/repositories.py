@@ -10,6 +10,6 @@ class ExamScheduleRepository:
         # get all unwritten examnations and last 3 weeks written
         # any exam written before the weeks earlier wont be displayed
         return cls.model.filter(
-            time__gt=(timezone.now() - timezone.timedelta(weeks=3)),
+            time__gt=(timezone.now() - timezone.timedelta(weeks=4)),
             course__level=int(level),
         ).all()

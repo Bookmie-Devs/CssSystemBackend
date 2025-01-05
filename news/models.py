@@ -1,5 +1,4 @@
 from django.db import models
-from accounts.models import CustomUser
 from uuid import uuid4
 
 # Create your models here.
@@ -23,4 +22,6 @@ class News(models.Model):
     last_updted = models.DateTimeField(auto_now=True, auto_now_add=False, null=True)
 
     class Meta:
-        verbose_name_plural = "News"
+        db_table = "news_blogs"
+        verbose_name = "News/Blogs"
+        verbose_name_plural = "News/Blogs"
