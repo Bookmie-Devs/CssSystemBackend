@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import ExecutivePosition, Executive
+from .models import ExecutivePosition, Executive, ExecutiveSocialLinks
 
 
 class ExecutivePositionSerializer(serializers.ModelSerializer):
@@ -14,6 +14,11 @@ class ExecutivePositionSerializer(serializers.ModelSerializer):
         ]
 
 
+
+class ExecutiveSocialLinksSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ExecutiveSocialLinks
+        fields = ['id', 'executive', 'platform']
 #
 # class ExecutiveProfileSerializer(serializers.ModelSerializer):
 #     class Meta:
@@ -25,6 +30,7 @@ class ExecutivePositionSerializer(serializers.ModelSerializer):
 class ExecutiveSerializer(serializers.ModelSerializer):
     position = ExecutivePositionSerializer()
     executive_name = serializers.SerializerMethodField()
+    social_media_links = ExecutiveSocialLinksSerializer(many=True)
 
     class Meta:
         model = Executive
@@ -33,6 +39,7 @@ class ExecutiveSerializer(serializers.ModelSerializer):
             "executive_id",
             "position",
             "image",
+            "social_media_links",
             "office_from",
             "is_active",
         ]

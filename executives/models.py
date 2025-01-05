@@ -32,9 +32,40 @@ class Executive(models.Model):
         return f"Mr. {self.user.first_name} {self.user.last_name}"
 
 
-# class ExecutiveProfile(models.Model):
-#     executive = models.ForeignKey(
-#         Executive,
-#         on_delete=models.CASCADE,
-#         related_name="profiles",
-#     )
+
+
+platform_choices = [
+    ("facebook", "Facebook"),
+    ("twitter", "Twitter"),
+    ("instagram", "Instagram"),
+    ("linkedin", "LinkedIn"),
+    ("youtube", "YouTube"),
+    ("snapchat", "Snapchat"),
+    ("tiktok", "TikTok"),
+    ("pinterest", "Pinterest"),
+    ("reddit", "Reddit"),
+    ("whatsapp", "WhatsApp"),
+    ("telegram", "Telegram"),
+    ("discord", "Discord"),
+    ("twitch", "Twitch"),
+    ("flickr", "Flickr"),
+    ("quora", "Quora"),
+    ("medium", "Medium"),
+    ("github", "GitHub"),
+    ("slack", "Slack"),
+]
+
+class ExecutiveSocialLinks(models.Model):
+    executive = models.ForeignKey(
+        Executive,
+        on_delete=models.CASCADE,
+        related_name="social_media_links",
+    )
+    platform = models.CharField(max_length=255, choices=platform_choices)
+    link = models.URLField()
+
+    class Meta:
+        db_table= "executives_social_links"
+        verbose_name = "Executive social links"
+        verbose_name_plural = "Executive social links"
+

@@ -50,3 +50,14 @@ def send_sms_message(phone, template, context):
         "sender_id": settings.SENDER_ID,
     }
     requests.post(url=endpoint, params=params)
+
+
+def notify_user(phone, message):
+    endpoint = "https://apps.mnotify.net/smsapi/"
+    params = {
+        "key": settings.SMS_API_KEY,
+        "to": phone,
+        "msg": message,
+        "sender_id": settings.SENDER_ID,
+    }
+    requests.post(url=endpoint, params=params)

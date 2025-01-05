@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "drf_spectacular",
     "accounts",
+    "core",
     "timeline",
     "events",
     "executives",

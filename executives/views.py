@@ -9,5 +9,5 @@ exec_repo = ExecutiveRepo
 
 
 class ExecutiveListView(ListAPIView):
-    queryset = exec_repo.get_all()
+    queryset = exec_repo.get_all_active()
     serializer_class = ExecutiveSerializer

@@ -1,12 +1,15 @@
 from django.contrib import admin
-from executives.models import Executive, ExecutivePosition
-
+from executives.models import Executive, ExecutivePosition, ExecutiveSocialLinks
 # Register your models here.
 
 
 @admin.register(ExecutivePosition)
 class ExecutivePositionAdmin(admin.ModelAdmin):
     list_display = ["name", "created_at", "last_updated"]
+
+@admin.register(ExecutiveSocialLinks)
+class ExecutiveSocialLinksAdmin(admin.ModelAdmin):
+    list_display = ["executive", "platform"]
 
 
 @admin.register(Executive)

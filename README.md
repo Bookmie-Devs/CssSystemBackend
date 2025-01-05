@@ -30,6 +30,9 @@ The system is divided into the following sections from the admin to the frontend
 - [Products](#products)
 - [And More](#and-more)
 
+## Key Features
+- [Notify User]()
+
 ![Image Description](./.readme_assets/admin_home_2.png)
 
 ---
@@ -164,10 +167,6 @@ Every CSS Executive or appointee is provided with an Administrator account by th
 - After the account is already in the database, the President or the system administrator will then assign the neccesary permissions and groups to that account depending on their appointement or executive role
 - allowing the user to log into the admin side as staff and start working right away.
 
-### **Account Misuse:**
-
-- If an account or position is misused, the President can deactivate the account (not delete it). The account can be reactivated after careful consideration.
-
 ---
 
 ## Academics and Resources
@@ -184,6 +183,27 @@ This section allows the President or the executive in charge of academics to cre
 ### **Note:**
 
 - The President or the Academic Board must approve resources before they are displayed, as only trusted content is shared with students.
+---
+
+### Notifications and Communication
+
+- The system comes with feature known as Notify User; this sends out specific messages to students via sms using the Css Knust sms sender id to communicate messages intended for that specific user.
+- Sms is used since it is the most reliable and simple way for students to check their messages.
+- Instances where this is useful could be sending out sms to a user who lost thier student is (assuming they are registered on the platform) and more ...
+
+- **Exam Location**: Coordinates of the exam venue and its address.
+- **Exam Time**: The scheduled start and end time of the exam.
+- **Map Link**: A link to the location on Google Maps, making it easy for students to find their exam venue.
+
+The notification can be sent via:
+
+- **Email**: Automatically sent to each student with all relevant details.
+- **SMS** (if configured): A text message containing the basic details of the exam (location, time, and map link).
+
+### **Note:**
+
+- Students receive a single notification upon allocation, but the admin can manually resend notifications if any updates or changes are made to the exam details.
+
 
 ---
 

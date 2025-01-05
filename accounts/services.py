@@ -251,7 +251,7 @@ def remove_saved_online_tip(request, pk):
             "message": "No blogs exists",
         }
     saved_tips = UserSavedOnlineTutorialTipsRepo.get_user_saved_tutorial_tips(user=user)
-    saved_tips.links.remove(online_tip)
+    saved_tips.online_tips.remove(online_tip)
 
     context = {
         "status": "Success",
