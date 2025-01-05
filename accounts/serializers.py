@@ -220,9 +220,7 @@ class UserSavedOnlineTutorialTipsSerializer(serializers.ModelSerializer):
 
 
 class GetUserSavedOnlineTutorialTipsSerializer(serializers.ModelSerializer):
-    online_tips = serializers.PrimaryKeyRelatedField(
-        queryset=OnlineTutorialTips.objects.all(), many=True
-    )
+    online_tips = OnlineTutorialTipsSerializer(many=True)
 
     class Meta:
         model = UserSavedOnlineTutorialTips
@@ -263,9 +261,7 @@ class UserSavedPastQuestionsSerializer(serializers.ModelSerializer):
 
 
 class GetUserSavedPastQuestionsSerializer(serializers.ModelSerializer):
-    past_questions = serializers.PrimaryKeyRelatedField(
-        queryset=PastQuestions.objects.all(), many=True
-    )
+    past_questions = PastQuestionsSerializer(many=True)
 
     class Meta:
         model = UserSavedPastQueations
