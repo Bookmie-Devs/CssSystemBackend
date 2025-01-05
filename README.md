@@ -317,5 +317,6 @@ The frontend of the system will be open-source, allowing students to contribute.
 
 
 ## ERD
-![ERD Image](./.readme_assets/news_read.png)
+- Png of the ER Daigram for the database
+![ERD Image](./.readme_assets/css_db.png)
 

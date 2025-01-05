@@ -1,7 +1,10 @@
 from rest_framework.serializers import (
     ModelSerializer,
     SerializerMethodField,
+    Serializer,
+    CharField,
 )
+from phonenumber_field.serializerfields import PhoneNumberField
 from rest_framework import serializers
 from accounts.models import (
     UserSavedPastQueations,
@@ -88,6 +91,29 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
 
 
 user_saved_blogs_repo = UserSavedBlogsRepo
+
+
+class RequestPhoneVerificationSerializer(Serializer):
+    phone = PhoneNumberField()
+
+
+class PhoneVericationSerializer(Serializer):
+    phone = PhoneNumberField()
+    code = CharField()
+
+
+class RequestForgotPasswordSerializer(Serializer):
+    phone = PhoneNumberField()
+
+
+class ResetPasswordSerializer(Serializer):
+    phone = PhoneNumberField()
+    code = CharField(max_length=5)
+    new_password = CharField(max_length=255)
+
+
+class ChangePasswordSerializer(Serializer):
+    new_password = CharField(max_length=255)
 
 
 class UserSavedBlogsSerializer(serializers.ModelSerializer):

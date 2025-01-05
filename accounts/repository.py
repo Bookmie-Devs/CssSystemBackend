@@ -4,7 +4,9 @@ from .models import (
     UserSavedSlides,
     UserSavedOnlineTutorialTips,
     UserSavedPastQueations,
+    PhoneVerifcationCodes,
 )
+from django.contrib.auth.hashers import make_password
 
 
 class UserRepository:
@@ -34,6 +36,10 @@ class UserRepository:
             return None
 
     @classmethod
+    def get_user_by_phone(cls, phone):
+        return cls.model.filter(phone=phone).first()
+
+    @classmethod
     def check_if_staff(cls, index_number):
         try:
             cls.model.get(
@@ -44,6 +50,25 @@ class UserRepository:
             return True
         except Exception:
             return False
+
+
+class PhoneVerificationCodeRepo:
+    model = PhoneVerifcationCodes.objects
+
+    @classmethod
+    def create_code(cls, phone, code):
+        _code = make_password(code)
+        if cls.model.filter(phone=phone).exists():
+            cls.model.get(phone=phone).delete()
+        cls.model.create(phone=phone, code=_code)
+
+    @classmethod
+    def check_code(cls, phone):
+        try:
+            v_code = cls.model.get(phone=phone)
+            return True, v_code
+        except:
+            return False, None
 
 
 class UserSavedBlogsRepo:

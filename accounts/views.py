@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from rest_framework.generics import DestroyAPIView, GenericAPIView, CreateAPIView
-
 from accounts.repository import UserRepository
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -22,6 +21,11 @@ from accounts.serializers import (
     GetUserSavedPastQuestionsSerializer,
     GetUserSavedOnlineTutorialTipsSerializer,
     GetUserSavedSlidesSerializer,
+    PhoneVericationSerializer,
+    ChangePasswordSerializer,
+    ResetPasswordSerializer,
+    RequestPhoneVerificationSerializer,
+    RequestForgotPasswordSerializer,
 )
 from accounts.services import (
     register_service,
@@ -32,6 +36,10 @@ from accounts.services import (
     get_user_saved_academic_resources,
     remove_saved_slide,
     remove_saved_past_question,
+    request_password_reset_service,
+    phone_verification_service,
+    reset_password_service,
+    request_phone_verification_service,
 )
 
 
@@ -59,6 +67,72 @@ class UserProfileView(GenericAPIView):
         service = user_profile_service
         status, context = service(request, self.serializer_classes)
         return Response(status=status, data=context)
+
+
+class RequestPhoneNumberVerificationView(CreateAPIView):
+    serializer_class = RequestPhoneVerificationSerializer
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request, *args, **kwargs):
+        service = request_phone_verification_service
+        status, context = service(request, self.serializer_class)
+        return Response(status=status, data=context)
+
+
+class PhoneVerifcationView(CreateAPIView):
+    serializer_class = PhoneVericationSerializer
+
+    def post(self, request, *args, **kwargs):
+        service = phone_verification_service
+        status, context = service(request, self.serializer_class)
+        return Response(data=context, status=status.HTTP_400_BAD_REQUEST)
+
+
+# for forgot password
+class RequestForgotPasswordResetView(CreateAPIView):
+    serializer_class = RequestForgotPasswordSerializer
+
+    def post(self, request, *args, **kwargs):
+        service = request_password_reset_service
+        status, context = service(request, self.serializer_class)
+        return Response(data=context, status=status)
+
+
+# for forgot password
+class ResetPasswordView(CreateAPIView):
+    serializer_class = ResetPasswordSerializer
+
+    def post(self, request, *args, **kwargs):
+        service = reset_password_service
+        status, context = service(request, self.serializer_class)
+        return Response(data=context, status=status)
+
+
+# """
+#     this should not be confuse with reset password where the user does
+#     not need to be authenticated and is assume to have forgotten
+#     his/her password
+#  """
+class ChangePasswordView(CreateAPIView):
+    serializer_class = ChangePasswordSerializer
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request: Request, *args, **kwargs):
+
+        serializer = self.serializer_class(data=request.data)
+        if serializer.is_valid(raise_exception=True):
+            new_password = serializer.validated_data.get("new_password")
+            user = request.user
+            user.set_password(new_password)
+            user.save()
+            return Response(
+                data={
+                    "status": "success",
+                    "message": "Password Change was successfull",
+                },
+                status=status.HTTP_200_OK,
+            )
+        return super().post(request, *args, **kwargs)
 
 
 class SaveBlogView(CreateAPIView):
