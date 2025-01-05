@@ -2,7 +2,7 @@
 
 ### Frontend Hosted On [Here](http://css.bookmie.com)
 ### Frontend CodeBase [Here](https://github.com/Bookmie-Devs/CSS-KNUST-Frontend)
-### Database Design [ERD](#erd)
+### Database ERD Design [Here](#erd)
 ### Backend Api Docs [Here](https://cssknust.pythonanywhere.com/api-docs/)
 ### Backend FilsSystem [Here]()
 
