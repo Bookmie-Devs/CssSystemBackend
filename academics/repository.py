@@ -16,6 +16,13 @@ class SlidesRepository:
     def get_slides(cls, course_id):
         return cls.model.filter(course=course_id).all()
 
+    @classmethod
+    def get_slide(cls, pk):
+        try:
+            return cls.model.get(pk=pk)
+        except:
+            return None
+
 
 class PastQuestionsRepository:
     model = PastQuestions.objects
@@ -24,6 +31,13 @@ class PastQuestionsRepository:
     def get_questions(cls, course_id):
         return cls.model.filter(course=course_id).all()
 
+    @classmethod
+    def get_past_question(cls, pk):
+        try:
+            return cls.model.get(pk=pk)
+        except:
+            return None
+
 
 class OnlineTutorialTipsRepository:
     model = OnlineTutorialTips.objects
@@ -31,3 +45,10 @@ class OnlineTutorialTipsRepository:
     @classmethod
     def get_links(cls, course_id):
         return cls.model.filter(course=course_id)
+
+    @classmethod
+    def get_online_tip(cls, pk):
+        try:
+            return cls.model.get(pk=pk)
+        except:
+            return None

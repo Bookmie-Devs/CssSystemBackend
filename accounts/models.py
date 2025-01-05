@@ -133,7 +133,7 @@ class UserSavedSlides(models.Model):
 
 class UserSavedOnlineTutorialTips(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
-    links = models.ManyToManyField(to=OnlineTutorialTips)
+    online_tips = models.ManyToManyField(to=OnlineTutorialTips)
     created_at = models.DateTimeField(auto_now_add=True)
     last_updated = models.DateTimeField(auto_now=True)
 

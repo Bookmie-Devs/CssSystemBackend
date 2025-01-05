@@ -19,6 +19,11 @@ from accounts.repository import (
     UserSavedSlidesRepo,
     UserSavedOnlineTutorialTipsRepo,
 )
+from academics.serializers import (
+    OnlineTutorialTipsSerializer,
+    PastQuestionsSerializer,
+    SlidesSerializer,
+)
 from news.serializers import NewsSerializer
 from accounts.models import CustomUser
 from django.contrib.auth.models import update_last_login
@@ -148,9 +153,7 @@ class UserSavedSlidesSerializer(serializers.ModelSerializer):
 
 
 class GetUserSavedSlidesSerializer(serializers.ModelSerializer):
-    slides = serializers.PrimaryKeyRelatedField(
-        queryset=AcademicSlides.objects.all(), many=True
-    )
+    slides = SlidesSerializer(many=True)
 
     class Meta:
         model = UserSavedSlides
@@ -164,21 +167,21 @@ user_saved_tutorial_tips_repo = UserSavedOnlineTutorialTipsRepo
 class UserSavedOnlineTutorialTipsSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserSavedOnlineTutorialTips
-        fields = ["id", "user", "links", "created_at", "last_updated"]
+        fields = ["id", "user", "online_tips", "created_at", "last_updated"]
         read_only_fields = ["id", "user", "created_at", "last_updated"]
 
     def create(self, validated_data: dict):
         user = self.context.get("request").user
         validated_data.update({"user": user})
-        links_data = validated_data.pop("links", [])
+        online_tips_data = validated_data.pop("online_tips", [])
 
         user_saved_tutorial_tips = (
             user_saved_tutorial_tips_repo.get_user_saved_tutorial_tips(user=user)
         )
 
         if user_saved_tutorial_tips:
-            for link in links_data:
-                user_saved_tutorial_tips.links.add(link)
+            for online_tip in online_tips_data:
+                user_saved_tutorial_tips.online_tips.add(online_tip)
             return user_saved_tutorial_tips
 
         user_saved_tutorial_tip = (
@@ -186,19 +189,19 @@ class UserSavedOnlineTutorialTipsSerializer(serializers.ModelSerializer):
                 **validated_data
             )
         )
-        user_saved_tutorial_tip.links.set(links_data)
+        user_saved_tutorial_tip.online_tips.set(online_tips_data)
         return user_saved_tutorial_tip
 
 
 class GetUserSavedOnlineTutorialTipsSerializer(serializers.ModelSerializer):
-    links = serializers.PrimaryKeyRelatedField(
+    online_tips = serializers.PrimaryKeyRelatedField(
         queryset=OnlineTutorialTips.objects.all(), many=True
     )
 
     class Meta:
         model = UserSavedOnlineTutorialTips
-        fields = ["id", "user", "links", "created_at", "last_updated"]
-        read_only_fields = ["id", "user", "links", "created_at", "last_updated"]
+        fields = ["id", "user", "online_tips", "created_at", "last_updated"]
+        read_only_fields = ["id", "user", "online_tips", "created_at", "last_updated"]
 
 
 user_saved_past_questions_repo = UserSavedPastQuestionsRepo
