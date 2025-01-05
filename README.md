@@ -1,8 +1,8 @@
 # CSS Administration System
 
-## Frontend Hosted On [css.bookmie.com](http://css.bookmie.com)
-## Frontend CodeBase [Here]()
-## Database Design []()
+## Frontend Hosted On [Here](http://css.bookmie.com)
+## Frontend CodeBase [Here](https://github.com/Bookmie-Devs/CSS-KNUST-Frontend)
+## Database Design [ERD](#erd)
 ## Backend Api Docs [Here](cssknust.pythonanywhere.com/api-docs/)
 ## Backend FilsSystem [Here]()
 
@@ -21,14 +21,14 @@ The CSS Administration System is a platform designed to manage the various roles
 
 The system is divided into the following sections from the admin to the frontend:
 
-- **Accounts and Permissions Management**
-- **Academics and Resources**
-- **Exam Allocation System**
-- **Events and News**
-- **Timeline and Executive Position History (Achievements)**
-- **Advertisements**
-- **Products**
-- **And More**
+- [Accounts and Permissions Management](#accounts-and-permissions-management)
+- [Academics and Resources](#academics-and-resources)
+- [Exam Allocation System](#exam-allocation-system)
+- [Events and News](#events-and-news)
+- [Timeline and Executive Position History (Achievements)](#timeline-and-executive-position-history-achievements)
+- [Advertisements](#advertisements)
+- [Products](#products)
+- [And More](#and-more)
 
 ![Image Description](./.readme_assets/admin_home_2.png)
 
@@ -314,4 +314,8 @@ The frontend of the system will be open-source, allowing students to contribute.
 ---
 
 **Note:** For any questions or further clarification on specific features, please feel free to reach out. Some features are explained in more detail practically.
+
+
+## ERD
+![ERD Image](./.readme_assets/news_read.png)
 

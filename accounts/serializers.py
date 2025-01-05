@@ -121,7 +121,7 @@ class GetUserSavedBlogsSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserSavedBlogs
         fields = ["id", "user", "blogs", "created_at", "last_updated"]
-        read_only_fields = ["id", "user", "blogs", "created_at", "last_updated"]
+        # read_only_fields = ["id", "user", "blogs", "created_at", "last_updated"]
 
 
 user_saved_slides_repo = UserSavedSlidesRepo
