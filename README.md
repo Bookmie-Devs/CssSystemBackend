@@ -237,6 +237,8 @@ The system automatically sends out notifications to students once their exam loc
 ### Note: 
 - The Examination allocation system ask for time the examination scheduled message is suppose to be sent ideally an hour before the paper starts. If this is information is not supply the system automatically sends the message 2 hours before the paper 
 
+[messaging schedule](./.readme_assets/messaging_schedule.png)
+
 - **Exam Location**: Coordinates of the exam venue and its address.
 - **Exam Time**: The scheduled start and end time of the exam.
 - **Map Link**: A link to the location on Google Maps, making it easy for students to find their exam venue.
