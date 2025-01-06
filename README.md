@@ -179,7 +179,18 @@ This section allows the President or the executive in charge of academics to cre
 - Once approved, resources will be made available on the front-end for students to browse and use.
 
 - Files will remain in the system until manually deleted, and they may be available for years unless removed.
+![](./.readme_assets/year_1.png)
 
+---
+
+![](./.readme_assets/year_1_resources.png)
+
+---
+
+## Saving Resources
+![](./.readme_assets/save_resources.png)
+
+---
 ### **Note:**
 
 - The President or the Academic Board must approve resources before they are displayed, as only trusted content is shared with students.
