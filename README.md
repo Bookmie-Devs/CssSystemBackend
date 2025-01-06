@@ -188,6 +188,7 @@ This section allows the President or the executive in charge of academics to cre
 ---
 
 ## Saving Resources
+- User after having account on the platform can save academic resources for later or even download them
 ![](./.readme_assets/save_resources.png)
 
 ---
