@@ -102,10 +102,15 @@ class CustomUser(AbstractUser):
 class PhoneVerifcationCodes(models.Model):
     phone = PhoneNumberField(unique=True, null=True, blank=False)
     code = models.CharField(max_length=10, null=True, blank=False)
+    expires_in = models.DateTimeField(null=True, blank=True, editable=False)
 
     class Meta:
         verbose_name = _("")
         verbose_name_plural = "PhoneVerificationCodes"
+    
+    def save(self, *args, **kwargs) -> None:
+        self.expires_in = timezone.now() + timezone.timedelta(minutes=10)
+        return super().save(*args, **kwargs)
 
     def __str__(self) -> str:
         return str(self.code)
