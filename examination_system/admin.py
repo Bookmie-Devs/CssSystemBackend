@@ -30,6 +30,12 @@ class ExaminationScheduleAdmin(admin.ModelAdmin):
             },
         ),
         (
+            "Messaging Schedule",
+            {
+                "fields": ("message_schedule",),
+            },
+        ),
+        (
             "Map",
             {
                 "fields": (

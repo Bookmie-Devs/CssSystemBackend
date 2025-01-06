@@ -6,6 +6,8 @@ from .models import (
     UserSavedPastQueations,
     PhoneVerifcationCodes,
 )
+from django.utils import timezone
+from django.db.models import ExpressionWrapper, F, IntegerField
 from django.contrib.auth.hashers import make_password
 
 
@@ -50,6 +52,25 @@ class UserRepository:
             return True
         except Exception:
             return False
+
+    @classmethod
+    def get_users_by_level(cls, target_level):
+        current_year = timezone.now().year
+        return cls.model.annotate(
+            level=ExpressionWrapper(
+                (4 - (F("graduation_year") - current_year)) * 100,
+                output_field=IntegerField(),
+            )
+        ).filter(level=target_level)
+
+    @classmethod
+    def fetch_examination_students_phone(cls, level):
+        # this is to fetch all students and send them message for exam starts
+        phones = [
+            f"0{str(user.phone).removeprefix('+233')}"
+            for user in cls.get_users_by_level(target_level=level)
+        ]
+        return phones
 
 
 class PhoneVerificationCodeRepo:

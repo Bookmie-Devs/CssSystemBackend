@@ -20,3 +20,8 @@ class NotifyUser(models.Model):
             self.action = "send"
             self.sent = True
         return super().save(*args, **kwargs)
+    
+    class Meta:
+        db_table= "notify_user"
+        verbose_name = "Notify User"
+        verbose_name_plural ="Notify User"

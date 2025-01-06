@@ -61,3 +61,21 @@ def notify_user(phone, message):
         "sender_id": settings.SENDER_ID,
     }
     requests.post(url=endpoint, params=params)
+
+
+def send_examination_schedule_message(students_phones, schedule_date, context):
+    end_point = "https://api.mnotify.com/api/sms/quick"
+    msg = render_to_string("exam_schedule_message.html", context)
+    api_key = settings.SMS_API_KEY_V2
+    print(api_key)
+    data = {
+        "recipient[]": ["0249706365", "0203698970"],
+        "sender": settings.SENDER_ID,
+        "message": msg,
+        "is_schedule": True,
+        "schedule_date": "",
+    }
+    url = end_point + "?key=" + api_key
+    response = requests.post(url, data)
+    data = response.json()
+    print(data)

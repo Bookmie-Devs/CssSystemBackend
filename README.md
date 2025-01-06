@@ -191,18 +191,9 @@ This section allows the President or the executive in charge of academics to cre
 - Sms is used since it is the most reliable and simple way for students to check their messages.
 - Instances where this is useful could be sending out sms to a user who lost thier student is (assuming they are registered on the platform) and more ...
 
-- **Exam Location**: Coordinates of the exam venue and its address.
-- **Exam Time**: The scheduled start and end time of the exam.
-- **Map Link**: A link to the location on Google Maps, making it easy for students to find their exam venue.
-
 The notification can be sent via:
 
-- **Email**: Automatically sent to each student with all relevant details.
 - **SMS** (if configured): A text message containing the basic details of the exam (location, time, and map link).
-
-### **Note:**
-
-- Students receive a single notification upon allocation, but the admin can manually resend notifications if any updates or changes are made to the exam details.
 
 
 ---
@@ -239,9 +230,12 @@ The Admin Dashboard is the control center of the Exam Allocation System, providi
 
 ---
 
-### **Notifications and Communication**
+### **Examination Notifications and Communication**
 
 The system automatically sends out notifications to students once their exam locations and times are confirmed. The notifications contain all necessary details, such as:
+
+### Note: 
+- The Examination allocation system ask for time the examination scheduled message is suppose to be sent ideally an hour before the paper starts. If this is information is not supply the system automatically sends the message 2 hours before the paper 
 
 - **Exam Location**: Coordinates of the exam venue and its address.
 - **Exam Time**: The scheduled start and end time of the exam.
@@ -249,12 +243,11 @@ The system automatically sends out notifications to students once their exam loc
 
 The notification can be sent via:
 
-- **Email**: Automatically sent to each student with all relevant details.
-- **SMS** (if configured): A text message containing the basic details of the exam (location, time, and map link).
+- **SMS** : A text message containing the basic details of the exam (location, time, and map link).
 
 ### **Note:**
 
-- Students receive a single notification upon allocation, but the admin can manually resend notifications if any updates or changes are made to the exam details.
+- Students receive a single notification upon allocation, but the admin can manually resend notifications if any updates or changes are made to the exam details using the notify user feature.
 
 ---
 
