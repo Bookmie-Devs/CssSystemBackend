@@ -54,23 +54,43 @@ class UserRepository:
             return False
 
     @classmethod
-    def get_users_by_level(cls, target_level):
+    def get_users_by_level_and_index_range(
+        cls, target_level, index_number_start, index_number_end
+    ):
         current_year = timezone.now().year
         return cls.model.annotate(
             level=ExpressionWrapper(
                 (4 - (F("graduation_year") - current_year)) * 100,
                 output_field=IntegerField(),
             )
-        ).filter(level=target_level)
+        ).filter(
+            level=target_level,
+            index_number__gte=index_number_start,
+            index_number__lte=index_number_end,
+        )
 
     @classmethod
-    def fetch_examination_students_phone(cls, level):
+    def fetch_examination_students_phone(
+        cls, level, index_number_start, index_number_end
+    ):
         # this is to fetch all students and send them message for exam starts
         phones = [
             f"0{str(user.phone).removeprefix('+233')}"
-            for user in cls.get_users_by_level(target_level=level)
+            for user in cls.get_users_by_level_and_index_range(
+                target_level=level,
+                index_number_start=index_number_start,
+                index_number_end=index_number_end,
+            )
         ]
         return phones
+
+    @classmethod
+    def delete_account(cls, user_id):
+        try:
+            user = cls.model.get(pk=user_id)
+            user.delete()
+        except:
+            ...
 
 
 class PhoneVerificationCodeRepo:

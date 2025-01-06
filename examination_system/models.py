@@ -29,7 +29,12 @@ class ExaminationSchedule(models.Model):
     geolocation = map_fields.GeoLocationField(max_length=100, null=True, blank=True)
 
     def save(self, *args, **kwargs):
-        students = UserRepository.fetch_examination_students_phone(self.course.level)
+        # fetch students within level and index number range
+        students = UserRepository.fetch_examination_students_phone(
+            level=self.course.level,
+            index_number_start=self.index_number_start,
+            index_number_end=self.index_number_end,
+        )
         print(students)
         if students:
             # only run when we have students in the list and list is not empty
@@ -37,7 +42,7 @@ class ExaminationSchedule(models.Model):
                 self.message_schedule
                 if self.message_schedule
                 else (self.time - timezone.timedelta(hours=2))
-            ).strftime('%Y-%m-%d %H:%M')
+            ).strftime("%Y-%m-%d %H:%M")
             context = {
                 "exam_date": self.time.date(),
                 "exam_time": self.time.time(),

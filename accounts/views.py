@@ -1,7 +1,6 @@
-from django.shortcuts import render
 from rest_framework.generics import DestroyAPIView, GenericAPIView, CreateAPIView
-from accounts.repository import UserRepository
 from rest_framework.views import APIView
+from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.views import TokenViewBase
@@ -40,6 +39,7 @@ from accounts.services import (
     phone_verification_service,
     reset_password_service,
     request_phone_verification_service,
+    delete_your_account_service,
 )
 
 
@@ -66,6 +66,15 @@ class UserProfileView(GenericAPIView):
     def get(self, request: Request):
         service = user_profile_service
         status, context = service(request, self.serializer_classes)
+        return Response(status=status, data=context)
+
+
+class DeleteAccountView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def delete(self, request, *args, **kwargs):
+        service = delete_your_account_service
+        status, context = service(request)
         return Response(status=status, data=context)
 
 

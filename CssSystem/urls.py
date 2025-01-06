@@ -28,6 +28,7 @@ from drf_spectacular.views import (
 
 
 urlpatterns = [
+    path("core/", include("core.urls")),
     path("accounts/", include("accounts.urls"), name="accounts"),
     path("news/", include("news.urls"), name="news"),
     path("exams/", include("examination_system.urls")),

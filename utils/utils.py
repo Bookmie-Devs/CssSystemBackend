@@ -65,7 +65,7 @@ def notify_user(phone, message):
 
 def send_examination_schedule_message(students_phones, schedule_date, context):
     end_point = "https://api.mnotify.com/api/sms/quick"
-    msg = render_to_string("exam_schedule_message.html", context)
+    msg = render_to_string("exam_schedule_message.txt", context)
     api_key = settings.SMS_API_KEY_V2
     print(api_key)
     data = {

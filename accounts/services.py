@@ -327,3 +327,14 @@ def get_user_saved_academic_resources(
         },
     }
     return ok, context
+
+
+def delete_your_account_service(request):
+    ok = status.HTTP_200_OK
+    user_id = request.user.pk
+    UserRepository.delete_account(user_id)
+    context = {
+        "status": "success",
+        "message": "Your account has been deleted",
+    }
+    return ok, context

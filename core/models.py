@@ -20,8 +20,19 @@ class NotifyUser(models.Model):
             self.action = "send"
             self.sent = True
         return super().save(*args, **kwargs)
-    
+
     class Meta:
-        db_table= "notify_user"
+        db_table = "notify_user"
         verbose_name = "Notify User"
-        verbose_name_plural ="Notify User"
+        verbose_name_plural = "Notify User"
+
+
+class ContactUs(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField(max_length=254)
+    message = models.TextField()
+    created_at = models.DateTimeField(verbose_name="Sent on", auto_now_add=True)
+
+    class Meta:
+        verbose_name = "Contact Us"
+        verbose_name_plural = "Contact Us"
