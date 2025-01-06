@@ -62,7 +62,7 @@ def request_phone_verification_service(request, serializer_class):
         PhoneVerificationCodeRepo.create_code(phone=_phone, code=code)
         send_sms_message(
             phone=phone,
-            template="phone_verification.html",
+            template="phone_verification.txt",
             context={
                 "code": code,
                 "fname": request.user.first_name,
@@ -139,7 +139,7 @@ def request_password_reset_service(request: Request, serializer_class):
         repo.create_code(phone=_phone, code=code)
         send_sms_message(
             phone=phone,
-            template="reset_password.html",
+            template="reset_password.txt",
             context={"code": code, "fname": user.first_name},
         )
         context = {

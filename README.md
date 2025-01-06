@@ -255,10 +255,10 @@ The system automatically sends out notifications to students once their exam loc
 - **Exam Time**: The scheduled start and end time of the exam.
 - **Map Link**: A link to the location on Google Maps, making it easy for students to find their exam venue.
 
-The notification can be sent via:
-
+The notification can be sent via sms:
+![](./.readme_assets/sms_notification.jpeg)
 - **SMS** : A text message containing the basic details of the exam (location, time, and map link).
-
+![](./.readme_assets/sms_message.jpeg)
 ### **Note:**
 
 - Students receive a single notification upon allocation, but the admin can manually resend notifications if any updates or changes are made to the exam details using the notify user feature.
