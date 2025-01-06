@@ -80,6 +80,7 @@ def phone_verification_service(request, serializer_class):
     """
     Service for verifying code sent to a students phone
     """
+    bad = status.HTTP_400_BAD_REQUEST
     serializer = serializer_class(data=request.data)
     if serializer.is_valid(raise_exception=True):
         phone = request.data.get("phone")
@@ -93,7 +94,7 @@ def phone_verification_service(request, serializer_class):
                     "data": {"phone": phone},
                 }
                 v_code.delete()
-                return status.HTTP_400_BAD_REQUEST, context
+                return bad, context
             context = {
                 "status": "success",
                 "message": "Phone number verified.",
@@ -114,6 +115,7 @@ def phone_verification_service(request, serializer_class):
                 "message": "Phone number verification failed.",
                 "data": {"phone": phone},
             }
+            return bad, context
 
 
 def request_password_reset_service(request: Request, serializer_class):

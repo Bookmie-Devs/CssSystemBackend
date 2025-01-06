@@ -24,7 +24,7 @@ def is_mobile(request):
 
 
 def generate_code(max=4, reset_password=False):
-    codes = digits + ascii_lowercase + ascii_uppercase
+    codes = digits + ascii_lowercase
     if reset_password:
         codes = digits
     code = sample(population=codes, k=max)
