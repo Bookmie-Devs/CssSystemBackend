@@ -31,17 +31,20 @@ class ExaminationSchedule(models.Model):
     def save(self, *args, **kwargs):
         students = UserRepository.fetch_examination_students_phone(self.course.level)
         print(students)
-        msg_scheduled_at = (
-            self.message_schedule
-            if self.message_schedule
-            else (self.time - timezone.timedelta(hours=2))
-        )
-        context = {
-            "exam_date": self.time.date(),
-            "exam_time": self.time.time(),
-            "course": self.course.course_name,
-            "college": self.college,
-            "room": self.room,
-        }
-        send_examination_schedule_message(students, msg_scheduled_at, context)
+        if students:
+            # only run when we have students in the list and list is not empty
+            msg_scheduled_at = (
+                self.message_schedule
+                if self.message_schedule
+                else (self.time - timezone.timedelta(hours=2))
+            ).strftime('%Y-%m-%d %H:%M')
+            context = {
+                "exam_date": self.time.date(),
+                "exam_time": self.time.time(),
+                "course": self.course.course_name,
+                "college": self.college,
+                "room": self.room,
+            }
+            print(msg_scheduled_at)
+            send_examination_schedule_message(students, msg_scheduled_at, context)
         return super().save(*args, **kwargs)

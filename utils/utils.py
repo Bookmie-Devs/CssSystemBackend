@@ -69,11 +69,11 @@ def send_examination_schedule_message(students_phones, schedule_date, context):
     api_key = settings.SMS_API_KEY_V2
     print(api_key)
     data = {
-        "recipient[]": ["0249706365", "0203698970"],
+        "recipient[]": students_phones,
         "sender": settings.SENDER_ID,
         "message": msg,
         "is_schedule": True,
-        "schedule_date": "",
+        "schedule_date": schedule_date,
     }
     url = end_point + "?key=" + api_key
     response = requests.post(url, data)
