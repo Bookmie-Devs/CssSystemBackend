@@ -1,4 +1,9 @@
-from rest_framework.generics import DestroyAPIView, GenericAPIView, CreateAPIView
+from rest_framework.generics import (
+    DestroyAPIView,
+    GenericAPIView,
+    CreateAPIView,
+    UpdateAPIView,
+)
 from rest_framework.views import APIView
 from rest_framework import status
 from rest_framework.response import Response
@@ -25,6 +30,7 @@ from accounts.serializers import (
     ResetPasswordSerializer,
     RequestPhoneVerificationSerializer,
     RequestForgotPasswordSerializer,
+    AccountUpdateSerializer,
 )
 from accounts.services import (
     register_service,
@@ -40,6 +46,7 @@ from accounts.services import (
     reset_password_service,
     request_phone_verification_service,
     delete_your_account_service,
+    update_account_service,
 )
 
 
@@ -66,6 +73,16 @@ class UserProfileView(GenericAPIView):
     def get(self, request: Request):
         service = user_profile_service
         status, context = service(request, self.serializer_classes)
+        return Response(status=status, data=context)
+
+
+class UpdateAccountView(UpdateAPIView):
+    serializer_class = AccountUpdateSerializer
+    permission_classes = [IsAuthenticated]
+
+    def update(self, request: Request, *args, **kwargs):
+        service = update_account_service
+        status, context = service(request, self.serializer_class, self.perform_update)
         return Response(status=status, data=context)
 
 

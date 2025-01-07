@@ -63,6 +63,7 @@ class CustomUserManager(BaseUserManager):
 
 class CustomUser(AbstractUser):
     username = None
+    email = None
     id = models.UUIDField(primary_key=True, unique=True, default=uuid4)
     phone = PhoneNumberField(unique=True)
     index_number = models.CharField(_("index number"), unique=True, max_length=255)
@@ -107,7 +108,7 @@ class PhoneVerifcationCodes(models.Model):
     class Meta:
         verbose_name = _("")
         verbose_name_plural = "PhoneVerificationCodes"
-    
+
     def save(self, *args, **kwargs) -> None:
         self.expires_in = timezone.now() + timezone.timedelta(minutes=10)
         return super().save(*args, **kwargs)

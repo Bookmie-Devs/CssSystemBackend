@@ -3,6 +3,8 @@ from rest_framework.serializers import (
     SerializerMethodField,
     Serializer,
     CharField,
+    BooleanField,
+    UUIDField,
 )
 from phonenumber_field.serializerfields import PhoneNumberField
 from rest_framework import serializers
@@ -60,6 +62,26 @@ class AccountProfileSerializer(ModelSerializer):
             "is_staff",
             "password",
             "groups",
+            "is_superuser",
+            "user_permissions",
+        )
+
+
+class AccountUpdateSerializer(ModelSerializer):
+    phone = PhoneNumberField()
+    phone_confirm = BooleanField(read_only=True)
+    id = UUIDField(read_only=True)
+
+    class Meta:
+        model = CustomUser
+        exclude = (
+            "is_staff",
+            "password",
+            "groups",
+            "is_active",
+            "last_login",
+            "date_joined",
+            "index_number",
             "is_superuser",
             "user_permissions",
         )

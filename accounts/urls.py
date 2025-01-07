@@ -19,6 +19,7 @@ from accounts.views import (
     RequestForgotPasswordResetView,
     ChangePasswordView,
     DeleteAccountView,
+    UpdateAccountView,
 )
 from rest_framework_simplejwt.views import (
     TokenRefreshView,
@@ -55,6 +56,11 @@ urlpatterns = [
         "verify-token/",
         TokenVerifyView.as_view(),
         name="token-verify",
+    ),
+    path(
+        "update-account/",
+        UpdateAccountView.as_view(),
+        name="update-account",
     ),
     path(
         "delete-accounts/",

@@ -48,6 +48,22 @@ def register_service(request, serializer_class):
         return (ok, context)
 
 
+def update_account_service(request, serializer_class, perform_update):
+    user = request.user
+    serializer = serializer_class(user, data=request.data, partial=True)
+    if serializer.is_valid(raise_exception=True):
+        perform_update(serializer)
+        context = {
+            "status": "success",
+            "message": "User profile updated successfully.",
+            "data": serializer.data,
+        }
+        return status.HTTP_200_OK, context
+    else:
+        context = {"status": "error", "message": serializer.errors}
+        return context, status.HTTP_400_BAD_REQUEST
+
+
 def request_phone_verification_service(request, serializer_class):
     """
     A Service for requesting any phone verification that will be later verified
