@@ -124,6 +124,7 @@ JAZZMIN_SETTINGS = {
         "core.notifyuser": "fa-solid fa-message",
         "core.contactus": "fa-solid fa-phone",
         "advertisements.advertisement": "fa-solid fa-rectangle-ad",
+        "academics.internshipopportunities": "fa-solid fa-handshake-angle",
     },
     # Icons that are used when one is not manually specified
     "default_icon_parents": "fas fa-chevron-circle-right",

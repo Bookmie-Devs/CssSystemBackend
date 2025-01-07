@@ -98,7 +98,11 @@ class InternshipOpportunities(models.Model):
         unique=True,
     )
     campany_name = models.CharField(max_length=255)
-    image = models.ImageField(null=True, upload_to="internships")
+    image = models.ImageField(
+        null=True,
+        upload_to="internships",
+        help_text="Image can be a flyer or the companies logo",
+    )
     description = models.TextField()
     registration_link = models.URLField()
     application_deadline = models.DateTimeField(null=True, blank=True)
@@ -106,3 +110,7 @@ class InternshipOpportunities(models.Model):
 
     def __str__(self):
         return self.campany_name
+
+    class Meta:
+        verbose_name = "Internship"
+        verbose_name_plural = "Internships"
