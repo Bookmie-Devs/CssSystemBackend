@@ -51,6 +51,10 @@ The system is divided into the following sections from the admin to the frontend
 Every CSS Executive or appointee is provided with an Administrator account by the elected President or Proxy Administrator. During account creation, permissions are set according to the user's role. The account details, such as index number, phone number, and a custom password, are provided, and the user can change their password later.
 
 - The executive dashboard is only available to authorized executives and can be accessed during the login process on the department site as an option to login into executive dashboard.
+![](./.readme_assets/normal_login.png)
+---
+![](./.readme_assets/exec_login.png)
+---
 - Note That: The login page to the excutive dashboard can only seen after the system takes in your index number and verify that you are an active staff memeber after which you will be redirected to the login page of the executive dashboard(this is called the excutive door(this is called the excutive door).
 - Also Note: Student login to get access to thier saved blogs, saved past questions, saved slides and examination allocation map is different fromt the excutive dashboard login. Therefore sessions an token authentication for both is not the same
 
