@@ -26,6 +26,7 @@ The system is divided into the following sections from the admin to the frontend
 - [Exam Allocation System](#exam-allocation-system)
 - [Events and News](#events-and-news)
 - [Timeline and Executive Position History (Achievements)](#timeline-and-executive-position-history-achievements)
+- [Studen Dashboard](#user-dashboard)
 - [Advertisements](#advertisements)
 - [Products](#products)
 - [And More](#and-more)
@@ -202,6 +203,14 @@ This section allows the President or the executive in charge of academics to cre
 ## Saving Resources
 - User after having account on the platform can save academic resources for later or even download them
 ![](./.readme_assets/save_resources.png)
+
+---
+## User Dashboard
+- The Department site comes with a user dashboard for students different from the executive dashboard where students can acess their saved resoursces and slides and also check upcoming exams with maps 
+- This Dashboard comes with account settings and saved blogs and an overview and more
+![](./.readme_assets/user_dashaboard.png)
+- User also have option to delete account which will delete every data about them including slides etc
+![](./.readme_assets/account_settings.png)
 
 ---
 ### **Note:**
