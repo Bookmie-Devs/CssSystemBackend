@@ -1,24 +1,6 @@
 # CSS Administration System
 
-### Frontend Hosted On [Here](http://css.bookmie.com)
-### Frontend CodeBase [Here](https://github.com/Bookmie-Devs/CSS-KNUST-Frontend)
-### Database ERD Design [Here](#erd)
-### Backend Api Docs [Here](https://cssknust.pythonanywhere.com/api-docs/)
-### Backend FilsSystem [Here]()
-
-## Overview
-
-The CSS Administration System is a platform designed to manage the various roles and responsibilities within the CSS Department. It is organized into sections corresponding to different levels of access, ensuring proper permissions are granted to each role. The system allows the President, or the Admin (acting as a proxy when the President is unavailable), to manage these permissions and all aspects of the system effectively.
-
-## Executives Admin Control System
-(Controls the site from news, blogs, events to educational resources which are regulated by the right executive in charge)
-(An Executive assign to a Group only views, edit or create entities the group has permissions base on rules set by the system admin(President or Proxy); more about this in the permissions section)
-![Image Description](./.readme_assets/admin_home.png)
-
-## Department Site
-![frontend view](./.readme_assets/frontend.png)
 ## Sections
-
 The system is divided into the following sections from the admin to the frontend:
 
 - [Accounts and Permissions Management](#accounts-and-permissions-management)
@@ -31,6 +13,35 @@ The system is divided into the following sections from the admin to the frontend
 - [Products](#products)
 - [And More](#and-more)
 
+---
+
+## Key Features
+- [Notify User]()
+
+---
+
+### Frontend Hosted On [Here](http://css.bookmie.com)
+### Frontend CodeBase [Here](https://github.com/Bookmie-Devs/CSS-KNUST-Frontend)
+### Database ERD Design [Here](#erd)
+### Backend Api Docs [Here](https://cssknust.pythonanywhere.com/api-docs/)
+### Backend FilsSystem [Here]()
+
+---
+
+## Overview
+
+The CSS Administration System is a platform designed to manage the various roles and responsibilities within the CSS Department. It is organized into sections corresponding to different levels of access, ensuring proper permissions are granted to each role. The system allows the President, or the Admin (acting as a proxy when the President is unavailable), to manage these permissions and all aspects of the system effectively.
+
+## Executives Admin Control System
+(Controls the site from news, blogs, events to educational resources which are regulated by the right executive in charge)
+(An Executive assign to a Group only views, edit or create entities the group has permissions base on rules set by the system admin(President or Proxy); more about this in the permissions section)
+![Image Description](./.readme_assets/admin_home.png)
+
+## Department Site
+![frontend view](./.readme_assets/frontend.png)
+
+---
+
 ![](./.readme_assets/dashboard_side_nav.png)
 
 ---
@@ -38,9 +49,6 @@ The system is divided into the following sections from the admin to the frontend
 ![](./.readme_assets/dashboard_side_nav_2.png)
 
 ---
-
-## Key Features
-- [Notify User]()
 
 ![Image Description](./.readme_assets/admin_home_2.png)
 
@@ -298,8 +306,14 @@ The system automatically sends out notifications to students once their exam loc
 
 The notification can be sent via sms:
 ![](./.readme_assets/sms_notification.jpeg)
+
+---
+
 - **SMS** : A text message containing the basic details of the exam (location, time, and map link).
 ![](./.readme_assets/sms_message.jpeg)
+
+---
+
 ### **Note:**
 
 - Students receive a single notification upon allocation, but the admin can manually resend notifications if any updates or changes are made to the exam details using the notify user feature.
