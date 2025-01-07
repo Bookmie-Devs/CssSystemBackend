@@ -4,6 +4,7 @@ from uuid import uuid4
 # Create your models here.
 
 
+# this model handles both blogs and news though the name suggest otherwise
 class News(models.Model):
     news_id = models.UUIDField(
         primary_key=True,
