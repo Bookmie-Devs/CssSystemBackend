@@ -30,6 +30,14 @@ The system is divided into the following sections from the admin to the frontend
 - [Products](#products)
 - [And More](#and-more)
 
+[](./.readme_assets/dashboard_side_nav.png)
+
+---
+
+[](./.readme_assets/dashboard_side_nav_2.png)
+
+---
+
 ## Key Features
 - [Notify User]()
 

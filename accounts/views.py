@@ -111,7 +111,7 @@ class PhoneVerifcationView(CreateAPIView):
     def post(self, request, *args, **kwargs):
         service = phone_verification_service
         status, context = service(request, self.serializer_class)
-        return Response(data=context, status=status.HTTP_400_BAD_REQUEST)
+        return Response(data=context, status=status)
 
 
 # for forgot password
