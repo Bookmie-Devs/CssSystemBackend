@@ -1,4 +1,10 @@
-from academics.models import Course, AcademicSlides, PastQuestions, OnlineTutorialTips
+from academics.models import (
+    Course,
+    AcademicSlides,
+    PastQuestions,
+    OnlineTutorialTips,
+    InternshipOpportunities,
+)
 
 
 class CourseRepository:
@@ -37,6 +43,18 @@ class PastQuestionsRepository:
             return cls.model.get(pk=pk)
         except:
             return None
+
+
+class InternshipOpportunitiesRepository:
+    model = InternshipOpportunities.objects
+
+    @classmethod
+    def get_all_internship_opportunities(cls):
+        return cls.model.all()
+
+    @staticmethod
+    def get_internship_by_id(cls, internship_id):
+        return cls.model.get(id=internship_id)
 
 
 class OnlineTutorialTipsRepository:

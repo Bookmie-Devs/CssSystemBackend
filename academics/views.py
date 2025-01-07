@@ -5,6 +5,7 @@ from academics.serializers import (
     OnlineTutorialTipsSerializer,
     PastQuestionsSerializer,
     SlidesSerializer,
+    InternshipOpportunitiesSerializer,
 )
 from academics.repository import CourseRepository
 from rest_framework.generics import ListAPIView
@@ -12,6 +13,7 @@ from academics.repository import (
     OnlineTutorialTipsRepository,
     SlidesRepository,
     PastQuestionsRepository,
+    InternshipOpportunitiesRepository,
 )
 from rest_framework.response import Response
 
@@ -48,3 +50,8 @@ class GetCourseResourcesView(ListAPIView):
             "slides": self.slides_sc(slides, many=True).data,
         }
         return Response(data=data)
+
+
+class InternshipOpportunitiesListView(ListAPIView):
+    serializer_class = InternshipOpportunitiesSerializer
+    queryset = InternshipOpportunitiesRepository.get_all_internship_opportunities()

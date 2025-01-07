@@ -241,6 +241,23 @@ The **Exam Allocation Section** is a comprehensive platform built to manage the 
 - **Exam Location Assignment**: Admin assigns a specific location to each student (e.g., Room 101, Building A).
 - **Exam Time**: The admin can set specific exam start and end times for each student.
 - **Google Maps Integration**
+### Map Section Usage
+- Move to the map section to select location of the exam on the map 
+![](./.readme_assets/exam_map.png)
+- Ones there, search Knust in the search bar provided to situate the map pointer on knust borders so that from there you can drag the pointer to where the collge of the exam is to be written
+- For precise allocation of the collge enlarge the map view with the toggle map bar and move the pointer to the location  
+![](./.readme_assets/map_pointing.png)
+
+---
+
+- After that the map should look like this.
+![](./.readme_assets/full_map.png)
+
+- As you drag the pointer the longitude and latitude of the examination changes in real time and could seen in the geolocation field.
+- This will be supply to the frontend to display the location of the exam
+![](./.readme_assets/geolocation.png)
+
+---
 
 ### **Note:**
 

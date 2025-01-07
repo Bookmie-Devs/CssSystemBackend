@@ -1,5 +1,11 @@
 from rest_framework.serializers import ModelSerializer, Serializer
-from academics.models import Course, AcademicSlides, OnlineTutorialTips, PastQuestions
+from academics.models import (
+    Course,
+    AcademicSlides,
+    OnlineTutorialTips,
+    PastQuestions,
+    InternshipOpportunities,
+)
 
 
 class CourseSerializer(ModelSerializer):
@@ -12,6 +18,20 @@ class SlidesSerializer(ModelSerializer):
     class Meta:
         model = AcademicSlides
         fields = "__all__"
+
+
+class InternshipOpportunitiesSerializer(ModelSerializer):
+    class Meta:
+        model = InternshipOpportunities
+        fields = [
+            "internship_id",
+            "campany_name",
+            "description",
+            "registration_link",
+            "application_deadline",
+            "created_at",
+        ]
+        read_only_fields = ["created_at"]
 
 
 class OnlineTutorialTipsSerializer(ModelSerializer):

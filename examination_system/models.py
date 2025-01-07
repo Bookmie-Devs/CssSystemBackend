@@ -12,8 +12,16 @@ from django.utils import timezone
 class ExaminationSchedule(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
-    index_number_start = models.CharField(default=0000, max_length=230)
-    index_number_end = models.CharField(default=0000, max_length=230)
+    index_number_start = models.CharField(
+        default=0000,
+        max_length=230,
+        help_text="Starting index number for that particular room",
+    )
+    index_number_end = models.CharField(
+        default=0000,
+        max_length=230,
+        help_text="Last index number for that particular room",
+    )
     time = models.DateTimeField(null=True)
     college = models.CharField(
         max_length=255,
@@ -53,3 +61,7 @@ class ExaminationSchedule(models.Model):
             print(msg_scheduled_at)
             send_examination_schedule_message(students, msg_scheduled_at, context)
         return super().save(*args, **kwargs)
+
+    class Meta:
+        verbose_name = "Examination Schedule Per Class"
+        verbose_name_plural = "Examination Schedules"

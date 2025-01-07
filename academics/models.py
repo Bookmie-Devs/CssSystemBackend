@@ -17,7 +17,7 @@ class Course(models.Model):
     course_id = models.UUIDField(
         primary_key=True, unique=True, default=uuid4, editable=False
     )
-    credit_hours= models.IntegerField(null=True)
+    credit_hours = models.IntegerField(null=True)
     course_name = models.CharField(max_length=200, null=True, blank=False)
     course_code = models.CharField(max_length=200, unique=True)
     level = models.IntegerField()
@@ -34,7 +34,9 @@ class OnlineTutorialTips(models.Model):
         on_delete=models.CASCADE,
         related_name="online_tips",
     )
-    title = models.CharField(null=True, max_length=255, help_text="A simple title about the resource")
+    title = models.CharField(
+        null=True, max_length=255, help_text="A simple title about the resource"
+    )
     link = models.URLField(("resource_link"), max_length=200)
     type_of_resource = models.CharField(choices=type_of_resource, max_length=50)
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
@@ -51,7 +53,9 @@ class OnlineTutorialTips(models.Model):
 
 class AcademicSlides(models.Model):
     course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name="slides")
-    title = models.CharField(null=True, max_length=255, help_text="A simple title about the resource")
+    title = models.CharField(
+        null=True, max_length=255, help_text="A simple title about the resource"
+    )
     file = models.FileField(_("Sildes"), upload_to="slides", max_length=100)
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
     last_updated = models.DateTimeField(auto_now=True, auto_now_add=False)
@@ -66,12 +70,13 @@ class AcademicSlides(models.Model):
         return f"{self.course.course_name} Slide"
 
 
-
 class PastQuestions(models.Model):
     course = models.ForeignKey(
         Course, on_delete=models.CASCADE, related_name="past_questions"
     )
-    title = models.CharField(null=True, max_length=255, help_text="A simple title about the resource")
+    title = models.CharField(
+        null=True, max_length=255, help_text="A simple title about the resource"
+    )
     file = models.FileField(_("Sildes"), upload_to="slides", max_length=100)
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
     last_updated = models.DateTimeField(auto_now=True, auto_now_add=False)
@@ -83,3 +88,21 @@ class PastQuestions(models.Model):
 
     def __str__(self) -> str:
         return f"{self.course.course_name} Past Questions"
+
+
+class InternshipOpportunities(models.Model):
+    internship_id = models.UUIDField(
+        editable=False,
+        default=uuid4,
+        primary_key=True,
+        unique=True,
+    )
+    campany_name = models.CharField(max_length=255)
+    image = models.ImageField(null=True, upload_to="internships")
+    description = models.TextField()
+    registration_link = models.URLField()
+    application_deadline = models.DateTimeField(null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.campany_name
