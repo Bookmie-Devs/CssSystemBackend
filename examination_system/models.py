@@ -34,6 +34,15 @@ class ExaminationSchedule(models.Model):
         blank=True,
         help_text="The time a message is suppose to be sent all students who have this exam; If no time is set the system will send message 1 hour before the paper",
     )
+    action = models.CharField(
+        max_length=255,
+        choices=[
+            ("hold_scheduling", "Hold Scheduling"),
+            ("schedule_message", "Schedule Message"),
+        ],
+        default="hold_scheduling",
+        help_text="Schedule Message Should Only Be Selected When Every Detail of The Examination Like Time And Location Is Confirm",
+    )
     geolocation = map_fields.GeoLocationField(max_length=100, null=True, blank=True)
 
     def save(self, *args, **kwargs):
@@ -44,7 +53,7 @@ class ExaminationSchedule(models.Model):
             index_number_end=self.index_number_end,
         )
         print(students)
-        if students:
+        if students and self.action == "schedule_message":
             # only run when we have students in the list and list is not empty
             msg_scheduled_at = (
                 self.message_schedule
@@ -58,7 +67,6 @@ class ExaminationSchedule(models.Model):
                 "college": self.college,
                 "room": self.room,
             }
-            print(msg_scheduled_at)
             send_examination_schedule_message(students, msg_scheduled_at, context)
         return super().save(*args, **kwargs)
 

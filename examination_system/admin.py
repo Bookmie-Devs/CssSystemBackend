@@ -6,12 +6,8 @@ from examination_system.models import ExaminationSchedule
 
 # Register your models here.
 class ExaminationScheduleAdmin(admin.ModelAdmin):
-    list_display = ["course", "college", "room", "time"]
-    list_filter = [
-        "course",
-        "college",
-        "room",
-    ]
+    list_display = ["course", "college", "room", "time", "action"]
+    list_filter = ["course", "college", "room", "action"]
     formfield_overrides = {
         map_fields.AddressField: {"widget": map_widgets.GoogleMapsAddressWidget},
     }
@@ -32,7 +28,10 @@ class ExaminationScheduleAdmin(admin.ModelAdmin):
         (
             "Messaging Schedule",
             {
-                "fields": ("message_schedule",),
+                "fields": (
+                    "action",
+                    "message_schedule",
+                ),
             },
         ),
         (
