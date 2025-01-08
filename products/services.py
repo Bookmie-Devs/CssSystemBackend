@@ -19,7 +19,7 @@ def product_payment_service(request, serializer_class):
         product_id = serializer.validated_data.get("product_id")
         product = product_repo.get_product_by_id(product_id=product_id)
         res = verify_payment(reference=reference)
-        if payment_is_confirm(res, product.package_price):
+        if payment_is_confirm(res, product.price):
             payment = payment_repo.create_payment(
                 reference=reference,
                 transaction=transaction,
