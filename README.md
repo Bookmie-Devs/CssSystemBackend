@@ -22,11 +22,6 @@ The system is divided into the following sections from the admin to the frontend
 
 ---
 
-## Key Features
-- [Notify User]()
-
----
-
 ### Frontend Hosted On [Here](http://css.bookmie.com)
 ### Frontend CodeBase [Here](https://github.com/Bookmie-Devs/CSS-KNUST-Frontend)
 ### Database ERD Design [Here](#erd)
