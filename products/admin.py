@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Product, ProductPayment
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('product_id', 'product_name', 'type_of_product', 'price', 'created_at', 'last_updated')
+    list_display = ('product_name', 'type_of_product', 'price', 'created_at', 'last_updated')
     list_filter = ('type_of_product', 'created_at')
     search_fields = ('product_name', 'product_id')
     ordering = ('-created_at',)

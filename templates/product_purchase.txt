@@ -1,0 +1,14 @@
+Thank you for your purchase from the Computer Science Department! 
+You have successfully bought a {{ product_name }}.
+
+Your purchase verification code is: {{ purchase_code}}. 
+
+Please keep this code private and do not share it with anyone. 
+
+Use this code to verify your purchase. 
+
+Your order will be processed shortly. 
+
+For any inquiries, feel free to contact us at any of our executives. 
+Best regards, 
+Computer Science Department, KNUST

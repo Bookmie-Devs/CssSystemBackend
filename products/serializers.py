@@ -1,4 +1,4 @@
-from rest_framework.serializers import ModelSerializer
+from rest_framework.serializers import ModelSerializer, CharField, UUIDField, Serializer
 from products.models import Product
 
 
@@ -11,3 +11,8 @@ class ProductListSerializer(ModelSerializer):
             "created_at",
             "last_updated",
         ]
+
+class ProductPaymentSerializer(Serializer):
+    reference = CharField()
+    transaction = CharField()
+    product_id = UUIDField()

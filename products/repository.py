@@ -1,4 +1,4 @@
-from products.models import Product
+from products.models import Product, ProductPayment
 
 class ProductRepo:
     model = Product.objects
@@ -15,5 +15,20 @@ class ProductRepo:
 
 
 
+class ProductPaymentRepository:
+    model = ProductPayment.objects
 
+    def create_payment(cls, transaction, product, reference):
+        payment = cls.model.create(
+            transaction=transaction,
+            product=product,
+            reference=reference,
+        )
+        return payment
 
+    # def get_payment_by_id(self, payment_id):
+    #     try:
+    #         return ProductPayment.objects.get(payment_id=payment_id)
+    #     except ProductPayment.DoesNotExist:
+    #         return None
+    #
