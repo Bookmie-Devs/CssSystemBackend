@@ -86,6 +86,7 @@ JAZZMIN_SETTINGS = {
         "academics.acadamicslides",
         "academics.pastquestions",
         "news",
+        "executives.executiveposition",
         "executives.executive",
         "executives.executiveprofile",
         "events",

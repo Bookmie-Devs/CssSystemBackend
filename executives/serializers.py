@@ -18,7 +18,7 @@ class ExecutivePositionSerializer(serializers.ModelSerializer):
 class ExecutiveSocialLinksSerializer(serializers.ModelSerializer):
     class Meta:
         model = ExecutiveSocialLinks
-        fields = ['id', 'executive', 'platform']
+        fields = ['id', 'executive', 'link', 'platform']
 #
 # class ExecutiveProfileSerializer(serializers.ModelSerializer):
 #     class Meta:

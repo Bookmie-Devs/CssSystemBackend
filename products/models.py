@@ -16,6 +16,7 @@ class Product(models.Model):
     product_id = models.UUIDField(
         default=uuid4, primary_key=True, unique=True, editable=False
     )
+    product_image = models.ImageField(upload_to="products",null=True)
     product_name = models.CharField(max_length=255)
     type_of_product = models.CharField(max_length=255, choices=type_of_product)
     price = models.DecimalField(decimal_places=2,max_digits=10)
