@@ -14,6 +14,8 @@ The system is divided into the following sections from the admin to the frontend
 - [Report/Contact Us Contol Service](#)
 - [Timeline and Executive Position History](#timeline-and-executive-position-history-achievements)
 - [Student Dashboard](#user-dashboard)
+- [Academic Resources Saving In Account](#)
+- [Blog Saving](#)
 - [Advertisements](#advertisements)
 - [Products](#products)
 - [And More](#and-more)
