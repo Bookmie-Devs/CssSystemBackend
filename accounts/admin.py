@@ -12,6 +12,7 @@ class CustomUserAdmin(admin.ModelAdmin):
         "last_name",
         "phone",
         "is_active",
+        "phone_confirm",
         "is_staff",
         "last_login",
     ]

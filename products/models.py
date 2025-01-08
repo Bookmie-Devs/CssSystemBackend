@@ -25,7 +25,7 @@ class Product(models.Model):
 
 
 class ProductPayment(models.Model):
-    payment_id = models.UUIDField(unique=True, primary_key=True, default=uuid4)
+    payment_id = models.UUIDField(unique=True, primary_key=True, default=uuid4, editable=False)
     reference = models.CharField(max_length=255, null=True, blank=True, editable=False)
     transaction_validation_code = models.CharField(max_length=100, unique=True)
     transaction = models.CharField(max_length=50)

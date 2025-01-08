@@ -52,6 +52,11 @@ def update_account_service(request, serializer_class, perform_update):
     user = request.user
     serializer = serializer_class(user, data=request.data, partial=True)
     if serializer.is_valid(raise_exception=True):
+        phone = serializer.validated_data.get("phone")
+        # if use change his phone
+        if phone and user.phone != phone:
+            user.phone_confirm = False
+            user.save()
         perform_update(serializer)
         context = {
             "status": "success",

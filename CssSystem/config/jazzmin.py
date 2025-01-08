@@ -91,7 +91,7 @@ JAZZMIN_SETTINGS = {
         "executives.executiveprofile",
         "events",
         "timeline",
-    ],
+        ],
     # Custom links to append to app groups, keyed on app name
     "custom_links": {
         "news": [
@@ -125,6 +125,8 @@ JAZZMIN_SETTINGS = {
         "core.notifyuser": "fa-solid fa-message",
         "core.contactus": "fa-solid fa-phone",
         "advertisements.advertisement": "fa-solid fa-rectangle-ad",
+        "products.productpayment":"fa-solid fa-money-bill",
+        "products.product":"fa-solid fa-cart-shopping", 
         "academics.internshipopportunities": "fa-solid fa-handshake-angle",
     },
     # Icons that are used when one is not manually specified
