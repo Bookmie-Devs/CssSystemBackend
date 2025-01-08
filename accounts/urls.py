@@ -112,7 +112,7 @@ urlpatterns = [
         name="user-saved-blogs",
     ),
     path(
-        "removed-saved-blog/<news_blog_id>/",
+        "removed-saved-blog/<int:news_blog_id>/",
         RemoveSavedBlogView.as_view(),
         name="removed-blog",
     ),
@@ -123,7 +123,7 @@ urlpatterns = [
         name="save-online-tip",
     ),
     path(
-        "remove-online-tutorial-tip/<online_tip_id>/",
+        "remove-online-tutorial-tip/<int:online_tip_id>/",
         RemoveSavedOnlineResourceTipsView.as_view(),
         name="remove-online-tip",
     ),

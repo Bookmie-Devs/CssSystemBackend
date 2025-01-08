@@ -38,6 +38,7 @@ urlpatterns = [
     path("executive-dashboard-cb/", admin.site.urls, name="executive-dashboard-cb"),
     path("events/", include("events.urls"), name="events"),
     path("ads/", include("advertisements.urls"), name="ads"),
+    path("products/", include("products.urls")),
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
     # Optional UI:
     path(

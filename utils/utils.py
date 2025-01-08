@@ -3,6 +3,7 @@ from django.conf import settings
 from random import sample
 from string import ascii_uppercase, ascii_lowercase, digits
 import requests
+import secrets
 
 
 def is_mobile(request):

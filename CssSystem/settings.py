@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "drf_spectacular",
     "accounts",
     "core",
+    "products",
     "timeline",
     "events",
     "executives",
