@@ -1,8 +1,9 @@
 from products.models import Product, ProductPayment
 
+
 class ProductRepo:
     model = Product.objects
-    
+
     @classmethod
     def get_all_products(cls):
         """Fetches all products."""
@@ -14,10 +15,10 @@ class ProductRepo:
         return cls.model.filter(pk=product_id).first()
 
 
-
 class ProductPaymentRepository:
     model = ProductPayment.objects
 
+    @classmethod
     def create_payment(cls, transaction, product, reference):
         payment = cls.model.create(
             transaction=transaction,
