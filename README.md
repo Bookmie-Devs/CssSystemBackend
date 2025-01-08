@@ -3,12 +3,17 @@
 ## Sections
 The system is divided into the following sections from the admin to the frontend:
 
-- [Accounts and Permissions Management](#accounts-and-permissions-management)
+- [Accounts and Permissions Management For Executives](#accounts-and-permissions-management)
 - [Academics and Resources](#academics-and-resources)
 - [Exam Allocation System](#exam-allocation-system)
-- [Events and News](#events-and-news)
-- [Timeline and Executive Position History (Achievements)](#timeline-and-executive-position-history-achievements)
-- [Studen Dashboard](#user-dashboard)
+- [Exam Message Scheduling](#exam-message-scheduling)
+- [Exam Map Direction](#exam-map-scheduling)
+- [Events and News/Blogs](#events-and-news)
+- [Student Specific Sms Notification](#)
+- [Internships](#)
+- [Report/Contact Us Contol Service](#)
+- [Timeline and Executive Position History](#timeline-and-executive-position-history-achievements)
+- [Student Dashboard](#user-dashboard)
 - [Advertisements](#advertisements)
 - [Products](#products)
 - [And More](#and-more)
