@@ -26,6 +26,7 @@ class InternshipOpportunitiesSerializer(ModelSerializer):
         fields = [
             "internship_id",
             "campany_name",
+            "image",
             "description",
             "registration_link",
             "application_deadline",
