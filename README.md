@@ -238,7 +238,6 @@ The notification can be sent via:
 
 - **SMS** (if configured): A text message containing the basic details of the exam (location, time, and map link).
 
-
 ---
 
 ### **Exam Allocation and Management**
@@ -438,7 +437,10 @@ The frontend of the system will be open-source, allowing students to contribute.
 **Note:** For any questions or further clarification on specific features, please feel free to reach out. Some features are explained in more detail practically.
 
 
-## ERD
+## Database and ERD
+- The database system used in the system is sqlite with the production protected on the server which is not inlcuded in the git repo as file 
+- Sqlite is also used in development but would not be included in the git History
+- Migrations are made every time after the database has undergone changes in development
 - Png of the ER Daigram for the database
 ![ERD Image](./.readme_assets/css_db.png)
 
