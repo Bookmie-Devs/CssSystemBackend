@@ -19,10 +19,11 @@ class ProductPaymentRepository:
     model = ProductPayment.objects
 
     @classmethod
-    def create_payment(cls, transaction, product, reference):
+    def create_payment(cls, transaction, phone, product, reference):
         payment = cls.model.create(
             transaction=transaction,
             product=product,
+            phone=phone,
             reference=reference,
         )
         return payment

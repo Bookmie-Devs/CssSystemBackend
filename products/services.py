@@ -14,6 +14,7 @@ def product_payment_service(request, serializer_class):
 
     serializer = serializer_class(data=request.data)
     if serializer.is_valid(raise_exception=True):
+        phone = serializer.validated_data.get("phone")
         reference = serializer.validated_data.get("reference")
         transaction = serializer.validated_data.get("transaction")
         product_id = serializer.validated_data.get("product_id")
@@ -22,6 +23,7 @@ def product_payment_service(request, serializer_class):
         if payment_is_confirm(res, product.price):
             payment = payment_repo.create_payment(
                 reference=reference,
+                phone=phone,
                 transaction=transaction,
                 product=product,
             )
@@ -30,6 +32,7 @@ def product_payment_service(request, serializer_class):
                 "message": "product Purchase was successfull",
             }
             send_sms_message(
+                phone,
                 "products_purchase.txt",
                 {
                     "purchase_code": payment.transaction_validation_code,

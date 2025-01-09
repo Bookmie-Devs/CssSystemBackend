@@ -1,6 +1,7 @@
 from django.db import models
 from uuid import uuid4
 import secrets
+from phonenumber_field.modelfields import PhoneNumberField
 import string
 
 # Create your models here.
@@ -28,6 +29,7 @@ class ProductPayment(models.Model):
     payment_id = models.UUIDField(
         unique=True, primary_key=True, default=uuid4, editable=False
     )
+    phone = PhoneNumberField(null=True)
     reference = models.CharField(max_length=255, null=True, blank=True, editable=False)
     transaction_validation_code = models.CharField(
         max_length=100, unique=True, editable=False
