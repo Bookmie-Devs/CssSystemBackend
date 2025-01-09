@@ -1,4 +1,5 @@
 from rest_framework.serializers import ModelSerializer, CharField, UUIDField, Serializer
+from phonenumber_field.serializerfields import PhoneNumberField
 from products.models import Product
 
 
@@ -11,6 +12,7 @@ class ProductListSerializer(ModelSerializer):
             "created_at",
             "last_updated",
         ]
+
 
 class ProductPaymentSerializer(Serializer):
     reference = CharField()

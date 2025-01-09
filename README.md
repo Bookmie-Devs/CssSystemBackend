@@ -17,7 +17,7 @@ The system is divided into the following sections from the admin to the frontend
 - [Academic Resources Saving In Account](#)
 - [Blog Saving](#)
 - [Advertisements](#advertisements)
-- [Products](#products)
+- [Products and Merchandise Purchase](#products-and-merchandise)
 - [And More](#and-more)
 
 ---
@@ -241,7 +241,6 @@ The notification can be sent via:
 
 ---
 
-
 ### **Exam Allocation and Management**
 
 The **Exam Allocation Section** is a comprehensive platform built to manage the allocation of examination locations to students. It ensures that students receive timely information about their assigned exam venues, the corresponding exam times, and relevant details such as maps and coordinates. Administrators can efficiently control and manage exam allocations, making the entire process smooth and transparent. The system also ensures that all notifications, including exam details and location data, are automatically sent to students.
@@ -268,6 +267,7 @@ The **Exam Allocation Section** is a comprehensive platform built to manage the 
 
 - As you drag the pointer the longitude and latitude of the examination changes in real time and could seen in the geolocation field.
 - This will be supply to the frontend to display the location of the exam
+
 ![](./.readme_assets/geolocation.png)
 
 ---
@@ -332,6 +332,39 @@ This section allows students to access the exact location of their exam venue th
 ### **Note:**
 
 - Accurate coordinates are critical for proper map functionality. The admin must double-check location data before finalizing allocations.
+
+---
+
+### Products and Merchandise
+![](./.readme_assets/products_secton.png)
+- The product section allow students and other individuals to Purchase the department products and Merchandise
+- This section like all the other section is controled by an appointee or excutive with persmission to add products and verify purchases
+- The appointee can be prevented from deleting payments History by the persmission section disgust above to make there is curruption
+
+---
+
+![](./.readme_assets/adding_product.png)
+- The Product section uses paystack for payments and a purchase code is sent to the user who made the purchase which he/she will use to verify his purchase later on the system
+- The above is to allow anyone to make save purchases without neccessary having an account on the platform
+
+#### Product Verification After payments
+
+![](./.readme_assets/payment_history.png)
+
+- After payments the user is sent the purchase code on sms 
+- He/She alerted to keep the  code secure and not share bacause to present the code to the excutive in charge of payments and product delivery
+- The excutive can search for the Purchase code to verify if for sure the payment was made before giving the product to the user
+![](./.readme_assets/payment_data.png)
+
+#### Purchase SMS
+
+![](./.readme_assets/purchase_sms.jpeg)
+
+#### Searching Code
+
+![](./.readme_assets/payment_search.png)
+
+- Purchase codes are unique and can not be deleted after creation to prevent manipulation or payment history 
 
 ---
 

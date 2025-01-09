@@ -9,7 +9,7 @@ urlpatterns = [
         name="products",
     ),
     path(
-        "product-payment",
+        "product-payment/",
         ProductPaymentView.as_view(),
     ),
 ]

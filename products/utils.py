@@ -16,6 +16,8 @@ def verify_payment(reference):
 
 # confirm payment dat from paystack
 def payment_is_confirm(data, amount):
+    print(data.json())
+    print(amount * 100)
     try:
         if (
             data.status_code == 200
@@ -23,8 +25,10 @@ def payment_is_confirm(data, amount):
             and data.json()["data"].get("status") == "success"
             and data.json()["data"].get("amount") == amount * 100
         ):
-            return True
+            phone = data.json()["data"]["authorization"].get("mobile_money_number")
+            return True, phone
         else:
-            return False
-    except:
-        return False
+            return False, None
+    except Exception as err:
+        print(err)
+        return False, None

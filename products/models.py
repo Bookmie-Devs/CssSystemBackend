@@ -24,6 +24,9 @@ class Product(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     last_updated = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return str(self.product_name)
+
 
 class ProductPayment(models.Model):
     payment_id = models.UUIDField(
