@@ -388,6 +388,11 @@ The Events and Programs section grants permissions to those in charge to write a
 
 ---
 
+## Internships
+![](./.readme_assets/internships_nav.png)
+- This section is allows the permited excutive or group of excutives to upload Internships on the platform with the link ot register 
+
+---
 ## Timeline and Executive Position History (Achievements)
 
 The Timeline is a historical record of events and programs within the department. After each event, pictures and videos are uploaded to the platform with student names tagged. If approved by the President, these are displayed publicly.
