@@ -9,16 +9,17 @@ The system is divided into the following sections from the admin to the frontend
 - [Exam Message Scheduling](#exam-message-scheduling)
 - [Exam Map Direction](#exam-map-scheduling)
 - [Events and News/Blogs](#events-and-news)
-- [Student Specific Sms Notification](#)
+- [Student Specific Sms Notification](#notifications-and-communication)
 - [Internships](#internships)
 - [Report/Contact Us Contol Service](#contact-us-control-service)
 - [Timeline and Executive Position History](#timeline-and-executive-position-history-achievements)
 - [Student Dashboard](#user-dashboard)
-- [Academic Resources Saving In Account](#)
-- [Blog Saving](#)
+- [Academic Resources Saving In Account](#save-resources)
+- [Blog Saving](#saving-blogs)
 - [Advertisements](#advertisements)
 - [Products and Merchandise Purchase](#products-and-merchandise)
-- [And More](#and-more)
+- [Maintanance and Contributions](#maintanance-and-contribution)
+- And More
 
 ---
 
@@ -426,6 +427,10 @@ Executives account and changed to inactive after thier time in office and new ro
 ## News and Blogs Feed
 ![Image](./.readme_assets/news.png)
 
+## Saving Blogs
+- Just like saving academic resources, students registered on the site can save blogs that they are interested in to later read or have reference to it.
+- This feature works similar to saving academic resources so saved blogs will be seen on the student's dashboard when they login into the system and can also delete it its not needed.
+
 ---
 ## Contact Us Control Service
 - The Contact us system help users submit complains to excutives in charge of handling complains so they reply back to users with feed back at quick as possible
@@ -439,9 +444,11 @@ On the business side, the system allows ads to be displayed in order to generate
 
 ---
 
-## The Plan
+## Maintanance and Contributions
 
-The frontend of the system will be open-source, allowing students to contribute. The backend will be maintained by core students for academic purposes, providing hands-on experience and the opportunity to work on a live project. This initiative aims to boost students' confidence in tackling real-world systems.
+- The frontend of the system will be open-source, allowing students to contribute and have experience with git and github with a maintainer to oversee the whole project. 
+- The backend will be maintained by core students or participants who want to have knowledge about how the system was develope and how to improve on it for academic purposes, providing hands-on experience and the opportunity to work on a live project. 
+- This initiative aims to boost students confidence in tackling real-world systems.
 
 ---
 
