@@ -18,7 +18,7 @@ The system is divided into the following sections from the admin to the frontend
 - [Blog Saving](#saving-blogs)
 - [Advertisements](#advertisements)
 - [Products and Merchandise Purchase](#products-and-merchandise)
-- [Maintanance and Contributions](#maintanance-and-contribution)
+- [Maintanance and Contributions](#maintanance-and-contributions)
 - And More
 
 ---
