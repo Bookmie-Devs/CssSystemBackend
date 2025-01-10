@@ -10,8 +10,8 @@ The system is divided into the following sections from the admin to the frontend
 - [Exam Map Direction](#exam-map-scheduling)
 - [Events and News/Blogs](#events-and-news)
 - [Student Specific Sms Notification](#)
-- [Internships](#)
-- [Report/Contact Us Contol Service](#)
+- [Internships](#internships)
+- [Report/Contact Us Contol Service](#contact-us-control-service)
 - [Timeline and Executive Position History](#timeline-and-executive-position-history-achievements)
 - [Student Dashboard](#user-dashboard)
 - [Academic Resources Saving In Account](#)
@@ -228,6 +228,14 @@ This section allows the President or the executive in charge of academics to cre
 - The President or the Academic Board must approve resources before they are displayed, as only trusted content is shared with students.
 ---
 
+### Internships
+![](./.readme_assets/internships_nav.png)
+- The internship section contains list of opportunities provided by the internship commitee on the excutive dashboard
+- The system allows excutives in charge of posting internships to add internships opportunities to the platform with links to apply for such internships
+![](./.readme_assets/internship_dashboard.png)
+![](./.readme_assets/internships.png)
+- This is to allow constant sharing of opportunities to the department
+
 ### Notifications and Communication
 
 - The system comes with feature known as Notify User; this sends out specific messages to students via sms using the Css Knust sms sender id to communicate messages intended for that specific user.
@@ -385,11 +393,6 @@ The system maintains a detailed log of all activities within the admin dashboard
 ![pic](./.readme_assets/events.png)
 The Events and Programs section grants permissions to those in charge to write about upcoming events in the department, along with pictures and videos. This allows the department to keep students informed about upcoming activities.
 
----
-
-## Internships
-![](./.readme_assets/internships_nav.png)
-- This section is allows the permited excutive or group of excutives to upload Internships on the platform with the link ot register 
 
 ---
 ## Timeline and Executive Position History (Achievements)
@@ -414,11 +417,19 @@ Executives account and changed to inactive after thier time in office and new ro
 ![Image Description](./.readme_assets/news_read.png)
 
 - Similar to events, this section is where news related to the department and blogs about Tech are written on the admin dashboard by individuals who permissions assign to them by the P.R.O Commitee. The news and blogs are published dynamically, so it doesn't need to be hardcoded each time. News and blog updates are automatically displayed for students to read.
+- The idea behind this section is to have a system Similar to medium where students wiht create knowledge about a particular subject can share thier knowledge
+- After the site is hosted with the departments domain name, our team will provide SEOs for dynamically uploade blogs such that anytim somebody searches for something on google or any search engine css dapartment of computer information will also be shown aside medium at the rest of article writing platforms 
+
 
 ![Image Description](./.readme_assets/news_read2.png)
 
 ## News and Blogs Feed
 ![Image](./.readme_assets/news.png)
+
+---
+## Contact Us Control Service
+- The Contact us system help users submit complains to excutives in charge of handling complains so they reply back to users with feed back at quick as possible
+- Student can report specific issues to the board and he/she is gerranteed that the repoeted issue is stored in the database and will looked at later 
 
 ---
 
