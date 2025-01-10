@@ -5,8 +5,8 @@ The system is divided into the following sections from the admin to the frontend
 
 - [Accounts and Permissions Management For Executives](#accounts-and-permissions-management)
 - [Academics and Resources](#academics-and-resources)
-- [Exam Allocation System](#exam-allocation-system)
-- [Exam Message Scheduling](#exam-message-scheduling)
+- [Exam Allocation System](#exam-allocation-and-management)
+- [Exam Message Scheduling](#examination-notifications-and-communication)
 - [Exam Map Direction](#exam-map-scheduling)
 - [Events and News/Blogs](#events-and-news)
 - [Student Specific Sms Notification](#notifications-and-communication)
